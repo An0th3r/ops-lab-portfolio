@@ -8,7 +8,7 @@
   <meta name="description" content="LeadDesk AI — panel do obsługi zapytań, oceny priorytetu i przygotowywania odpowiedzi.">
   <title>LeadDesk AI — obsługa zapytań</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308121c'/%3E%3Cpath d='M18 18h28v28H18z' fill='none' stroke='%2358e0c2' stroke-width='4'/%3E%3Cpath d='M25 26v12h8m0-12v12h7' fill='none' stroke='%2358e0c2' stroke-width='4'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.min.css?v=20260912-10">
+  <link rel="stylesheet" href="styles.min.css?v=20260912-12">
   <meta name="robots" content="index,follow">
   <meta property="og:title" content="LeadDesk AI — interaktywne demo">
   <meta property="og:description" content="Zobacz drogę zapytania od formularza przez walidację i AI do panelu obsługi.">
@@ -24,16 +24,16 @@
       </a>
       <nav aria-label="Panel">
         <p>PRZESTRZEŃ ROBOCZA</p>
-        <a class="is-active" href="#dashboard"><i>⌂</i><span>Dashboard</span></a>
+        <a class="is-active" href="#dashboard"><i>⌂</i><span>Pulpit</span></a>
         <a href="#pipeline"><i>◎</i><span>Etapy zapytań</span><b data-new-count>3</b></a>
         <a href="#leads"><i>◇</i><span>Wszystkie zapytania</span></a>
-        <a href="#automation"><i>⌁</i><span>Automatyzacje</span></a>
+        <a href="#automation"><i>⌁</i><span>Asystent AI</span></a>
         <a href="#reports"><i>▥</i><span>Raporty</span></a>
       </nav>
       <div class="workspace-card">
-        <span>WORKSPACE</span>
-        <strong>OPS/LAB Demo</strong>
-        <small>Administrator</small>
+        <span>ŚRODOWISKO</span>
+        <strong>OPS/LAB</strong>
+        <small>Tryb demonstracyjny</small>
       </div>
       <a class="back-link" href="../">← Powrót do portfolio</a>
     </aside>
@@ -43,7 +43,7 @@
         <button class="menu-button" type="button" aria-label="Otwórz menu">☰</button>
         <label class="global-search"><span>⌕</span><input type="search" placeholder="Szukaj zapytania lub tematu…" aria-label="Szukaj zapytań"></label>
         <div class="top-actions">
-          <span class="system-status"><i></i> System działa</span>
+          <span class="system-status is-checking"><i></i><b data-system-status>Sprawdzam AI…</b></span>
           <div class="top-popover-wrap">
             <button class="icon-button notifications-button" type="button" aria-label="Pokaż ostatnie zdarzenia" aria-expanded="false">
               <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg><b>3</b>
@@ -68,27 +68,27 @@
           <div class="flow-intro">
             <p class="overline">INTERAKTYWNA SYMULACJA</p>
             <h2 id="flow-title">Zobacz, co dzieje się po wysłaniu zapytania</h2>
-            <p>Demo pokazuje kolejne warstwy systemu. Dane nie opuszczają tej karty i po odświeżeniu znikają.</p>
+            <p>Symulacja pokazuje drogę przykładowego zapytania. Dodany wpis istnieje tylko do odświeżenia strony.</p>
             <button class="primary-button run-flow" type="button"><span>▶</span> Wyślij przykładowe zapytanie</button>
           </div>
           <div class="flow-workbench">
             <ol class="flow-stages" aria-label="Przepływ danych">
               <li data-flow-step="form"><i>01</i><span><strong>Formularz / widget</strong><small>użytkownik wysyła zapytanie</small></span></li>
-              <li data-flow-step="api"><i>02</i><span><strong>API na brzegu</strong><small>limit ruchu i kontrola origin</small></span></li>
+              <li data-flow-step="api"><i>02</i><span><strong>Warstwa API</strong><small>limit ruchu i kontrola źródła</small></span></li>
               <li data-flow-step="validation"><i>03</i><span><strong>Walidacja</strong><small>format, długość i wymagane pola</small></span></li>
-              <li data-flow-step="database"><i>04</i><span><strong>Baza D1</strong><small>zapis zapytania i historii zdarzeń</small></span></li>
-              <li data-flow-step="ai"><i>05</i><span><strong>Ocena zapytania AI</strong><small>podsumowanie i priorytet</small></span></li>
+              <li data-flow-step="database"><i>04</i><span><strong>Zapis danych</strong><small>zapytanie i historia zdarzeń</small></span></li>
+              <li data-flow-step="ai"><i>05</i><span><strong>Wstępna analiza</strong><small>podsumowanie i priorytet</small></span></li>
               <li data-flow-step="dashboard"><i>06</i><span><strong>Panel obsługi</strong><small>zapytanie trafia na właściwy etap</small></span></li>
             </ol>
             <div class="flow-console"><div><span></span><span></span><span></span><strong>ZDARZENIA SYSTEMU · SYMULACJA</strong></div><pre data-flow-log aria-live="polite">Gotowe. Kliknij „Wyślij przykładowe zapytanie”.</pre></div>
           </div>
         </section>
 
-        <section class="metrics" aria-label="Podsumowanie lejka">
+        <section class="metrics" aria-label="Podsumowanie zapytań">
           <article><div><span>NOWE ZAPYTANIA</span><small>aktualny zestaw</small></div><strong data-metric="new">0</strong><i class="metric-icon">↗</i></article>
           <article><div><span>DO KONTAKTU</span><small>sprawdzone zapytania</small></div><strong data-metric="qualified">0</strong><i class="metric-icon">✓</i></article>
           <article><div><span>WYSŁANE OFERTY</span><small>oczekują na decyzję</small></div><strong data-metric="offer">0</strong><i class="metric-icon">▤</i></article>
-          <article class="metric-value"><div><span>SZACOWANA WARTOŚĆ</span><small>suma budżetów w danych demo</small></div><strong data-metric="value">0 zł</strong><i class="metric-icon">◇</i></article>
+          <article class="metric-value"><div><span>ŁĄCZNY BUDŻET</span><small>suma przykładowych zakresów</small></div><strong data-metric="value">0 zł</strong><i class="metric-icon">◇</i></article>
         </section>
 
         <section class="dashboard-grid">
@@ -103,7 +103,7 @@
               <div class="focus-score"><span>PRIORYTET</span><strong>82<small>/100</small></strong><div><i style="width:82%"></i></div></div>
               <p data-ai-insight>AI wskazuje zapytanie wymagające uwagi i podpowiada bezpieczny następny krok.</p>
               <button class="primary-button full open-priority" type="button"><span>AI</span> Przygotuj odpowiedź na żywo <span>→</span></button>
-              <small class="privacy-note">AI przygotowuje szkice. Nic nie jest wysyłane automatycznie.</small>
+              <small class="privacy-note">Przycisk dotyczy zapytania wskazanego powyżej. Inny rekord wybierzesz z tablicy etapów.</small>
             </section>
 
             <section class="activity-panel panel" id="activity">
@@ -114,13 +114,13 @@
         </section>
 
         <section class="leads-panel panel" id="leads">
-          <div class="panel-head"><div><p class="overline"><span class="demo-only">DANE FUNKCJONALNE DEMO</span><span class="production-only">BAZA</span></p><h2><span class="demo-only">Przykładowe scenariusze</span><span class="production-only">Wszystkie zapytania</span></h2><small class="demo-dataset-note demo-only">Nie są to prawdziwi klienci ani wyniki sprzedaży.</small></div><div class="panel-tools"><label class="table-filter"><span>⌕</span><input type="search" placeholder="Filtruj tabelę" aria-label="Filtruj tabelę zapytań"></label><button class="compact-button export-demo" type="button">Eksport CSV</button></div></div>
+          <div class="panel-head"><div><p class="overline"><span class="demo-only">DANE PRZYKŁADOWE</span><span class="production-only">BAZA</span></p><h2><span class="demo-only">Scenariusze do przetestowania</span><span class="production-only">Wszystkie zapytania</span></h2><small class="demo-dataset-note demo-only">Każdy rekord można otworzyć, zmienić jego etap i wykorzystać do wygenerowania szkicu.</small></div><div class="panel-tools"><label class="table-filter"><span>⌕</span><input type="search" placeholder="Filtruj tabelę" aria-label="Filtruj tabelę zapytań"></label><button class="compact-button export-demo" type="button">Eksport CSV</button></div></div>
           <div class="table-wrap"><table><thead><tr><th>Zapytanie</th><th>Źródło</th><th>Temat</th><th>Budżet</th><th>Status</th><th>Następny krok</th><th></th></tr></thead><tbody data-lead-table></tbody></table></div>
         </section>
 
         <section class="reports-row" id="reports">
           <article class="panel source-card"><div class="panel-head"><div><p class="overline">ŹRÓDŁA</p><h2>Skąd przychodzą zapytania</h2></div></div><div class="source-chart" data-source-chart></div></article>
-          <article class="panel automation-card"><div class="panel-head"><div><p class="overline">AUTOMATYZACJE</p><h2>Aktywne reguły</h2></div></div><ul><li><i>✓</i><span><strong>Nowe zapytanie z widgetu</strong><small>Zapis + powiadomienie</small></span><b>AKTYWNA</b></li><li><i>✓</i><span><strong>Ocena zapytania przez AI</strong><small>Podsumowanie i priorytet</small></span><b>AKTYWNA</b></li><li><i>✓</i><span><strong>Przypomnienie o odpowiedzi</strong><small>Gdy zapytanie czeka 24 godziny</small></span><b>AKTYWNA</b></li></ul></article>
+          <article class="panel automation-card"><div class="panel-head"><div><p class="overline">PRZEPŁYW PRACY</p><h2>Elementy prezentowane w demo</h2></div></div><ul><li><i>✓</i><span><strong>Nowe zapytanie z formularza</strong><small>Dodanie do panelu i powiadomienie</small></span><b>POKAZANE</b></li><li><i>✓</i><span><strong>Szkic odpowiedzi AI</strong><small>Uruchamiany ręcznie dla wybranego rekordu</small></span><b>DZIAŁA</b></li><li><i>✓</i><span><strong>Kontrola następnego kroku</strong><small>Etap, historia i przypomnienie</small></span><b>POKAZANE</b></li></ul></article>
         </section>
 
         <footer><span>LeadDesk AI · OPS/LAB</span><span>Panel demonstracyjny · 2026</span></footer>
@@ -146,7 +146,7 @@
     <form method="dialog" class="modal-card" data-lead-form>
       <header><div><p class="overline">NOWE ZAPYTANIE</p><h2>Dodaj zapytanie demonstracyjne</h2></div><button class="icon-button close-lead-modal" type="button" aria-label="Zamknij">×</button></header>
       <div class="form-grid"><label>Nazwa scenariusza<input name="name" value="Własny scenariusz demo" required></label><label>E-mail<input name="email" type="email" value="demo@example.com" required></label><label class="wide">Temat<input name="topic" value="Automatyzacja obsługi zapytań" required></label><label>Budżet<select name="budget"><option>3–5 tys. zł</option><option>5–8 tys. zł</option><option>Do ustalenia</option></select></label><label>Źródło<select name="source"><option>Widget AI</option><option>Formularz WWW</option><option>E-mail</option></select></label><label class="wide">Opis<textarea name="message" rows="4" required>Potrzebujemy uporządkować obsługę zapytań ze strony.</textarea></label></div>
-      <p class="modal-note">W publicznym demo wpisy pozostają wyłącznie w pamięci bieżącej karty.</p>
+      <p class="modal-note">Dodany wpis działa tylko do odświeżenia strony. Do modelu AI trafi dopiero po kliknięciu „Przygotuj szkic”.</p>
       <footer><button class="secondary-button close-lead-modal" type="button">Anuluj</button><button class="primary-button" type="submit">Dodaj zapytanie</button></footer>
     </form>
   </dialog>
@@ -160,6 +160,6 @@
   </section>
 
   <div class="toast" role="status" aria-live="polite"></div>
-  <script src="app.min.js?v=20260912-10"></script>
+  <script src="app.min.js?v=20260912-12"></script>
 </body>
 </html>
