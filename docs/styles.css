@@ -35,7 +35,8 @@ main { position: relative; z-index: 1; }
 .eyebrow { margin: 0 0 1.4rem; display: flex; align-items: center; gap: .65rem; color: var(--accent); font-size: .76rem; letter-spacing: .17em; font-weight: 800; }
 .eyebrow span { width: 24px; height: 1px; background: currentColor; }
 h1, h2, h3, p { margin-top: 0; }
-h1 { margin-bottom: 1.7rem; max-width: 760px; font-size: clamp(3rem, 5vw, 5.6rem); line-height: .97; letter-spacing: -.055em; }
+h1 { margin-bottom: 1.7rem; max-width: 760px; font-size: clamp(3rem, 4.35vw, 4rem); line-height: .97; letter-spacing: -.055em; }
+h1 .hero-title-line { display: inline-block; white-space: nowrap; }
 h1 em { color: var(--muted); font-style: normal; font-weight: 500; }
 .hero-lead { max-width: 650px; color: #b9c5d2; font-size: 1.08rem; }
 .hero-actions { margin-top: 2.2rem; display: flex; flex-wrap: wrap; gap: .8rem; }
@@ -249,7 +250,7 @@ footer .brand-mark { width: 28px; height: 28px; padding: 6px; }
   .site-header nav, .header-cta { display: none; }
   .hero, .section { padding-inline: 1rem; }
   .hero { min-height: auto; padding-top: 4rem; }
-  h1 { font-size: clamp(2.65rem, 14vw, 4rem); }
+  h1 { font-size: clamp(1.55rem, 7.8vw, 3.6rem); }
   .metric-grid { grid-template-columns: repeat(2, 1fr); }
   .metric-grid div:nth-child(2) { border-right: 0; }
   .metric-grid div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
