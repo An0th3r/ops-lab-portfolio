@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#071018">
   <meta name="description" content="LeadDesk AI — panel do obsługi zapytań, kwalifikacji leadów i przygotowywania ofert.">
   <title>LeadDesk AI — centrum sprzedaży</title>
-  <link rel="stylesheet" href="styles.min.css?v=20260912-2">
+  <link rel="stylesheet" href="styles.min.css?v=20260912-3">
   <meta name="robots" content="index,follow">
   <meta property="og:title" content="LeadDesk AI — interaktywne demo">
   <meta property="og:description" content="Zobacz drogę leada od formularza przez walidację i AI do panelu sprzedaży.">
@@ -63,7 +63,7 @@
               <li data-flow-step="api"><i>02</i><span><strong>API na brzegu</strong><small>limit ruchu i kontrola origin</small></span></li>
               <li data-flow-step="validation"><i>03</i><span><strong>Walidacja</strong><small>format, długość i wymagane pola</small></span></li>
               <li data-flow-step="database"><i>04</i><span><strong>Baza D1</strong><small>zapis leada i historii zdarzeń</small></span></li>
-              <li data-flow-step="ai"><i>05</i><span><strong>Kwalifikacja AI</strong><small>podsumowanie i priorytet</small></span></li>
+              <li data-flow-step="ai"><i>05</i><span><strong>Ocena zapytania AI</strong><small>podsumowanie i priorytet</small></span></li>
               <li data-flow-step="dashboard"><i>06</i><span><strong>Panel sprzedaży</strong><small>lead trafia do pipeline</small></span></li>
             </ol>
             <div class="flow-console"><div><span></span><span></span><span></span><strong>ZDARZENIA BACKENDU · SYMULACJA</strong></div><pre data-flow-log aria-live="polite">Gotowe. Kliknij „Wyślij przykładowy lead”.</pre></div>
@@ -72,9 +72,9 @@
 
         <section class="metrics" aria-label="Podsumowanie lejka">
           <article><div><span>NOWE ZAPYTANIA</span><small>aktualny zestaw</small></div><strong data-metric="new">0</strong><i class="metric-icon">↗</i></article>
-          <article><div><span>ZAKWALIFIKOWANE</span><small>gotowe do kontaktu</small></div><strong data-metric="qualified">0</strong><i class="metric-icon">✓</i></article>
+          <article><div><span>DO KONTAKTU</span><small>sprawdzone zapytania</small></div><strong data-metric="qualified">0</strong><i class="metric-icon">✓</i></article>
           <article><div><span>WYSŁANE OFERTY</span><small>oczekują na decyzję</small></div><strong data-metric="offer">0</strong><i class="metric-icon">▤</i></article>
-          <article class="metric-value"><div><span>WARTOŚĆ PIPELINE</span><small>suma danych demo</small></div><strong data-metric="value">0 zł</strong><i class="metric-icon">◇</i></article>
+          <article class="metric-value"><div><span>SZACOWANA WARTOŚĆ</span><small>suma budżetów w danych demo</small></div><strong data-metric="value">0 zł</strong><i class="metric-icon">◇</i></article>
         </section>
 
         <section class="dashboard-grid">
@@ -106,7 +106,7 @@
 
         <section class="reports-row" id="reports">
           <article class="panel source-card"><div class="panel-head"><div><p class="overline">ŹRÓDŁA</p><h2>Skąd przychodzą zapytania</h2></div></div><div class="source-chart" data-source-chart></div></article>
-          <article class="panel automation-card"><div class="panel-head"><div><p class="overline">AUTOMATYZACJE</p><h2>Aktywne reguły</h2></div></div><ul><li><i>✓</i><span><strong>Nowy lead z widgetu</strong><small>Zapis + powiadomienie</small></span><b>AKTYWNA</b></li><li><i>✓</i><span><strong>Kwalifikacja AI</strong><small>Podsumowanie i priorytet</small></span><b>AKTYWNA</b></li><li><i>✓</i><span><strong>Brak kontaktu 24 h</strong><small>Przypomnienie w panelu</small></span><b>AKTYWNA</b></li></ul></article>
+          <article class="panel automation-card"><div class="panel-head"><div><p class="overline">AUTOMATYZACJE</p><h2>Aktywne reguły</h2></div></div><ul><li><i>✓</i><span><strong>Nowy lead z widgetu</strong><small>Zapis + powiadomienie</small></span><b>AKTYWNA</b></li><li><i>✓</i><span><strong>Ocena zapytania przez AI</strong><small>Podsumowanie i priorytet</small></span><b>AKTYWNA</b></li><li><i>✓</i><span><strong>Brak kontaktu 24 h</strong><small>Przypomnienie w panelu</small></span><b>AKTYWNA</b></li></ul></article>
         </section>
 
         <footer><span>LeadDesk AI · OPS/LAB</span><span>Panel demonstracyjny · 2026</span></footer>
@@ -123,7 +123,7 @@
       <dl><div><dt>Źródło</dt><dd data-drawer-source>—</dd></div><div><dt>Budżet</dt><dd data-drawer-budget>—</dd></div><div><dt>Dodano</dt><dd data-drawer-created>—</dd></div><div><dt>Priorytet AI</dt><dd data-drawer-score>—</dd></div></dl>
       <section class="ai-summary"><p class="overline">PODSUMOWANIE AI</p><p data-drawer-summary>—</p></section>
       <section class="draft-box" hidden><div><p class="overline">SZKIC ODPOWIEDZI · NIE WYSŁANO</p><button class="copy-draft" type="button">Kopiuj</button></div><strong data-draft-subject></strong><p data-draft-body></p></section>
-      <label class="status-select">Zmień etap<select data-status-select><option value="new">Nowy</option><option value="qualified">Zakwalifikowany</option><option value="offer">Oferta</option><option value="won">Wygrany</option><option value="lost">Utracony</option></select></label>
+      <label class="status-select">Zmień etap<select data-status-select><option value="new">Nowy</option><option value="qualified">Do kontaktu</option><option value="offer">Oferta wysłana</option><option value="won">Zlecenie przyjęte</option><option value="lost">Odrzucone</option></select></label>
     </div>
     <footer><button class="secondary-button create-offer" type="button">Podgląd oferty</button><button class="primary-button generate-draft" type="button"><span>AI</span> Przygotuj szkic</button></footer>
   </aside>
@@ -146,6 +146,6 @@
   </section>
 
   <div class="toast" role="status" aria-live="polite"></div>
-  <script src="app.min.js?v=20260912-2"></script>
+  <script src="app.min.js?v=20260912-3"></script>
 </body>
 </html>

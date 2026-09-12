@@ -42,7 +42,7 @@ architekturę rozwiązania. Kod backendu, prompt i baza wiedzy pozostają prywat
 ## LeadDesk AI — interaktywne demo
 
 Publiczny symulator pokazuje pełną drogę zapytania: formularz, kontrolę API,
-walidację, zapis, kwalifikację AI i pojawienie się leada w panelu sprzedaży.
+walidację, zapis, ocenę przez AI i pojawienie się leada w panelu sprzedaży.
 W demo dane zostają wyłącznie w pamięci karty. Produkcyjny Worker, migracje D1,
 logowanie, prompty i testy są utrzymywane w oddzielnym prywatnym repozytorium.
 
