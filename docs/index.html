@@ -14,7 +14,7 @@
   <meta property="og:description" content="Publiczny kod, dokumentacja i testy. Automatyzacje IT oraz asystent AI, które można sprawdzić przed zleceniem.">
   <meta property="og:url" content="https://an0th3r.github.io/ops-lab-portfolio/">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070b12'/%3E%3Cpath d='M18 20h28v9H18zm0 15h28v9H18z' fill='none' stroke='%235de4c7' stroke-width='4'/%3E%3Ccircle cx='24' cy='24.5' r='2' fill='%235de4c7'/%3E%3Ccircle cx='24' cy='39.5' r='2' fill='%235de4c7'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=20260912-3">
+  <link rel="stylesheet" href="styles.css?v=20260912-4">
 </head>
 <body>
   <a class="skip-link" href="#realizacje">Przejdź do projektów</a>
@@ -126,23 +126,23 @@
         <div class="ai-product-copy">
           <p class="eyebrow"><span></span> PRODUKT DO WDROŻENIA</p>
           <h2 id="ai-title">Asystent AI<br>na stronę firmy.</h2>
-          <p>Widget odpowiada na pytania klientów na podstawie treści zaakceptowanych przez właściciela strony. Model działa za prywatnym API, więc klucz i baza wiedzy nie trafiają do przeglądarki.</p>
+          <p>Widget odpowiada na najczęstsze pytania na podstawie materiałów firmy, pomaga zebrać potrzebne informacje i kieruje klienta do właściwego kontaktu.</p>
           <ul class="ai-checks">
             <li><span>01</span> Wiedza dopasowana do firmy</li>
-            <li><span>02</span> Ograniczenie liczby zapytań</li>
-            <li><span>03</span> Bez zapisywania rozmów w bazie</li>
+            <li><span>02</span> Ochrona przed nadużyciami</li>
+            <li><span>03</span> Wygląd dopasowany do strony</li>
           </ul>
           <div class="ai-product-actions">
             <button class="button button-primary" type="button" data-open-ai-assistant>Uruchom demo <span aria-hidden="true">↗</span></button>
             <a class="button button-ghost" href="#kontakt">Zapytaj o wdrożenie</a>
           </div>
-          <p class="ai-code-note"><span aria-hidden="true">◆</span> Backend, prompt i baza wiedzy pozostają prywatne. Klient kupuje wdrożenie lub uzgodnioną licencję, nie publiczny kod źródłowy.</p>
+          <p class="ai-code-note"><span aria-hidden="true">◆</span> Zakres odpowiedzi, ton rozmowy i sposób przekazania kontaktu są dopasowywane do potrzeb firmy.</p>
         </div>
         <div class="ai-product-visual" aria-label="Schemat działania asystenta AI">
           <div class="ai-terminal-head"><span>ops-lab / ai-assistant</span><strong><i></i> READY</strong></div>
           <div class="ai-conversation">
             <div class="ai-message ai-message-user"><small>KLIENT</small><p>Czy możecie wdrożyć monitoring i backup na moim VPS?</p></div>
-            <div class="ai-route" aria-hidden="true"><span>WIDGET</span><i>→</i><span>PRYWATNE API</span><i>→</i><span>MODEL + WIEDZA</span></div>
+            <div class="ai-route" aria-hidden="true"><span>WIDGET</span><i>→</i><span>API</span><i>→</i><span>MODEL + WIEDZA</span></div>
             <div class="ai-message ai-message-bot"><small>ASYSTENT</small><p>Tak. Do wstępnej oceny potrzebny jest system serwera, lista usług i oczekiwany zakres kopii. Przed zmianami powstaje plan odtworzenia.</p></div>
           </div>
           <dl class="ai-metrics"><div><dt>API</dt><dd>Cloudflare Worker</dd></div><div><dt>OCHRONA</dt><dd>4 zapytania / min</dd></div><div><dt>DANE</dt><dd>bez trwałego zapisu</dd></div></dl>
@@ -153,13 +153,13 @@
     <section class="section leaddesk-section" id="leaddesk" aria-labelledby="leaddesk-title">
       <div class="leaddesk-showcase">
         <div class="leaddesk-copy">
-          <p class="eyebrow"><span></span> INTERAKTYWNY PRODUKT · AI + MINI CRM</p>
-          <h2 id="leaddesk-title">Lead wpada.<br>System robi porządek.</h2>
-          <p>LeadDesk zbiera zapytania, pokazuje ich drogę przez backend, ocenia priorytet i przygotowuje szkic odpowiedzi do zatwierdzenia. Publiczne demo działa bez prawdziwych danych i bez dostępu do prywatnego kodu serwera.</p>
+          <p class="eyebrow"><span></span> SYSTEM OBSŁUGI ZAPYTAŃ · AI</p>
+          <h2 id="leaddesk-title">Od zapytania<br>do odpowiedzi.</h2>
+          <p>LeadDesk porządkuje wiadomości ze strony, wskazuje sprawy wymagające uwagi i przygotowuje szkice odpowiedzi do zatwierdzenia. Dzięki temu każde zapytanie ma przypisany status, historię oraz konkretny następny krok.</p>
           <ul class="leaddesk-points">
-            <li><span>01</span><strong>Lejek i baza leadów</strong><small>Statusy, filtry, historia i następny krok.</small></li>
-            <li><span>02</span><strong>Ocena oraz szkice AI</strong><small>AI pomaga, ale niczego nie wysyła samodzielnie.</small></li>
-            <li><span>03</span><strong>Backend pozostaje prywatny</strong><small>Baza, logowanie, prompty i zabezpieczenia nie są publikowane.</small></li>
+            <li><span>01</span><strong>Zapytania w jednym miejscu</strong><small>Źródło, temat, budżet, status i historia kontaktu.</small></li>
+            <li><span>02</span><strong>AI podpowiada następny krok</strong><small>Ocena priorytetu, krótkie podsumowanie i szkic odpowiedzi.</small></li>
+            <li><span>03</span><strong>Pełna kontrola nad kontaktem</strong><small>Użytkownik zatwierdza treść i decyduje o zmianie etapu.</small></li>
           </ul>
           <div class="ai-product-actions">
             <a class="button button-primary" href="leaddesk/">Uruchom pełne demo <span aria-hidden="true">↗</span></a>
@@ -167,15 +167,15 @@
           </div>
         </div>
         <div class="leaddesk-visual" aria-label="Przepływ zapytania przez LeadDesk AI">
-          <header><span>LEADDESK / EVENT STREAM</span><strong><i></i> DEMO READY</strong></header>
+          <header><span>LEADDESK / PRZEPŁYW ZAPYTANIA</span><strong><i></i> DEMO AKTYWNE</strong></header>
           <ol>
             <li><b>01</b><span><strong>Formularz lub widget</strong><small>nowe zapytanie</small></span><em>200 OK</em></li>
-            <li><b>02</b><span><strong>Walidacja API</strong><small>origin · limit ruchu · format</small></span><em>PASS</em></li>
-            <li><b>03</b><span><strong>Prywatna baza D1</strong><small>lead + historia zdarzeń</small></span><em>STORED</em></li>
+            <li><b>02</b><span><strong>Walidacja API</strong><small>źródło · limit ruchu · format</small></span><em>OK</em></li>
+            <li><b>03</b><span><strong>Zapis w bazie</strong><small>zapytanie + historia zdarzeń</small></span><em>ZAPISANO</em></li>
             <li><b>04</b><span><strong>Ocena zapytania AI</strong><small>priorytet · podsumowanie · krok</small></span><em>86/100</em></li>
-            <li><b>05</b><span><strong>Panel sprzedaży</strong><small>pipeline + szkic do akceptacji</small></span><em>READY</em></li>
+            <li><b>05</b><span><strong>Panel obsługi</strong><small>status + szkic do akceptacji</small></span><em>GOTOWE</em></li>
           </ol>
-          <footer><span>PUBLICZNIE</span> interfejs demonstracyjny <i>·</i> <span>PRYWATNIE</span> backend i logika produktu</footer>
+          <footer><span>FORMULARZ</span> → walidacja → zapis → ocena AI → <span>PANEL OBSŁUGI</span></footer>
         </div>
       </div>
     </section>
@@ -373,6 +373,6 @@
 
   <footer><div><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span>OPS<span>/</span>LAB</span></a><p>Automatyzacje IT · backup · monitoring · wdrożenia</p></div><p>Kod · testy · dokumentacja · 2026</p></footer>
   <script src="script.js?v=20260912-3"></script>
-  <script src="ai-assistant-widget.min.js?v=20260912-1" data-brand="OPS/LAB" data-accent="#5de4c7" defer></script>
+  <script src="ai-assistant-widget.min.js?v=20260912-1" data-endpoint="https://ops-lab-ai-assistant.ops-lab-ai-assistant.workers.dev/api/chat" data-brand="OPS/LAB" data-accent="#5de4c7" defer></script>
 </body>
 </html>
