@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#071018">
   <meta name="description" content="LeadDesk AI — panel do obsługi zapytań, kwalifikacji leadów i przygotowywania ofert.">
   <title>LeadDesk AI — centrum sprzedaży</title>
-  <link rel="stylesheet" href="styles.min.css?v=20260912-1">
+  <link rel="stylesheet" href="styles.min.css?v=20260912-2">
   <meta name="robots" content="index,follow">
   <meta property="og:title" content="LeadDesk AI — interaktywne demo">
   <meta property="og:description" content="Zobacz drogę leada od formularza przez walidację i AI do panelu sprzedaży.">
@@ -41,7 +41,7 @@
       <header class="topbar">
         <button class="menu-button" type="button" aria-label="Otwórz menu">☰</button>
         <label class="global-search"><span>⌕</span><input type="search" placeholder="Szukaj leada, firmy lub tematu…" aria-label="Szukaj leadów"></label>
-        <div class="top-actions"><span class="system-status"><i></i> System działa</span><button class="icon-button" type="button" aria-label="Powiadomienia">♢<b>3</b></button><button class="avatar-button" type="button">OP</button></div>
+        <div class="top-actions"><span class="system-status"><i></i> System działa</span><button class="icon-button notifications-button" type="button" aria-label="Pokaż ostatnie zdarzenia">♢<b>3</b></button><button class="avatar-button" type="button" aria-label="Konto administratora">OP</button></div>
       </header>
 
       <div class="content">
@@ -79,7 +79,7 @@
 
         <section class="dashboard-grid">
           <div class="pipeline-panel panel" id="pipeline">
-            <div class="panel-head"><div><p class="overline">PIPELINE</p><h2>Leady według etapu</h2></div><div class="panel-tools"><button class="compact-button" type="button" data-filter="all">Wszystkie</button><button class="icon-button" type="button" aria-label="Więcej opcji">•••</button></div></div>
+            <div class="panel-head"><div><p class="overline">PIPELINE</p><h2>Leady według etapu</h2></div><div class="panel-tools"><button class="compact-button" type="button" data-filter="all">Wszystkie</button><button class="icon-button refresh-pipeline" type="button" aria-label="Odśwież pipeline">↻</button></div></div>
             <div class="pipeline-board" data-pipeline></div>
           </div>
 
@@ -93,7 +93,7 @@
             </section>
 
             <section class="activity-panel panel">
-              <div class="panel-head"><div><p class="overline">AKTYWNOŚĆ</p><h2>Ostatnie zdarzenia</h2></div><button class="icon-button" type="button" aria-label="Odśwież">↻</button></div>
+              <div class="panel-head"><div><p class="overline">AKTYWNOŚĆ</p><h2>Ostatnie zdarzenia</h2></div><button class="icon-button refresh-activity" type="button" aria-label="Odśwież aktywność">↻</button></div>
               <ol class="activity-list" data-activity></ol>
             </section>
           </aside>
@@ -130,10 +130,10 @@
 
   <dialog class="lead-modal">
     <form method="dialog" class="modal-card" data-lead-form>
-      <header><div><p class="overline">NOWE ZAPYTANIE</p><h2>Dodaj lead demonstracyjny</h2></div><button class="icon-button" value="cancel" aria-label="Zamknij">×</button></header>
+      <header><div><p class="overline">NOWE ZAPYTANIE</p><h2>Dodaj lead demonstracyjny</h2></div><button class="icon-button close-lead-modal" type="button" aria-label="Zamknij">×</button></header>
       <div class="form-grid"><label>Identyfikator<input name="name" value="Zapytanie demonstracyjne" required></label><label>E-mail<input name="email" type="email" value="kontakt@example.com" required></label><label class="wide">Temat<input name="topic" value="Automatyzacja procesu sprzedaży" required></label><label>Budżet<select name="budget"><option>3–5 tys. zł</option><option>5–8 tys. zł</option><option>Do ustalenia</option></select></label><label>Źródło<select name="source"><option>Widget AI</option><option>Formularz WWW</option><option>E-mail</option></select></label><label class="wide">Opis<textarea name="message" rows="4" required>Potrzebujemy uporządkować obsługę zapytań ze strony.</textarea></label></div>
       <p class="modal-note">W publicznym demo wpisy pozostają wyłącznie w pamięci bieżącej karty.</p>
-      <footer><button class="secondary-button" value="cancel">Anuluj</button><button class="primary-button" value="default">Dodaj do pipeline</button></footer>
+      <footer><button class="secondary-button close-lead-modal" type="button">Anuluj</button><button class="primary-button" type="submit">Dodaj do pipeline</button></footer>
     </form>
   </dialog>
 
@@ -146,6 +146,6 @@
   </section>
 
   <div class="toast" role="status" aria-live="polite"></div>
-  <script src="app.min.js?v=20260912-1"></script>
+  <script src="app.min.js?v=20260912-2"></script>
 </body>
 </html>
