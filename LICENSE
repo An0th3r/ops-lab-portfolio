@@ -9,8 +9,9 @@ This MIT License applies only to the following open-source components:
 - examples/ and demo-output/ related to those three tools
 - docs/animation/
 
-The website design and the distributed AI assistant widget file
-`docs/ai-assistant-widget.min.js` are excluded from the MIT License.
+The website design, the distributed AI assistant widget file
+`docs/ai-assistant-widget.min.js`, and the LeadDesk AI demo under
+`docs/leaddesk/` are excluded from the MIT License.
 They are Copyright (c) 2026 OPS/LAB. All rights reserved. No permission is
 granted to copy, modify, redistribute, sublicense or sell those excluded
 components without prior written permission.

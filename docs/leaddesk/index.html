@@ -1,0 +1,151 @@
+<!-- LeadDesk AI public demo interface. Copyright 2026 OPS/LAB. All rights reserved. Public build contains no API keys, private prompts or backend source. -->
+<!doctype html>
+<html lang="pl" data-mode="demo">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071018">
+  <meta name="description" content="LeadDesk AI — panel do obsługi zapytań, kwalifikacji leadów i przygotowywania ofert.">
+  <title>LeadDesk AI — centrum sprzedaży</title>
+  <link rel="stylesheet" href="styles.min.css?v=20260912-1">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="LeadDesk AI — interaktywne demo">
+  <meta property="og:description" content="Zobacz drogę leada od formularza przez walidację i AI do panelu sprzedaży.">
+</head>
+<body>
+  <a class="skip-link" href="#main">Przejdź do panelu</a>
+  <div class="demo-banner" role="status"><strong>DEMO PORTFOLIO</strong><span>Dane są przykładowe i nie przedstawiają prawdziwych klientów ani wyników sprzedaży.</span></div>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="product-logo" href="#dashboard" aria-label="LeadDesk AI">
+        <span class="logo-mark">LD</span><span><strong>LeadDesk</strong><small>AI sales workspace</small></span>
+      </a>
+      <nav aria-label="Panel">
+        <p>PRZESTRZEŃ ROBOCZA</p>
+        <a class="is-active" href="#dashboard"><i>⌂</i><span>Dashboard</span></a>
+        <a href="#pipeline"><i>◎</i><span>Pipeline</span><b data-new-count>3</b></a>
+        <a href="#leads"><i>◇</i><span>Wszystkie leady</span></a>
+        <a href="#automation"><i>⌁</i><span>Automatyzacje</span></a>
+        <a href="#reports"><i>▥</i><span>Raporty</span></a>
+      </nav>
+      <div class="workspace-card">
+        <span>WORKSPACE</span>
+        <strong>OPS/LAB Demo</strong>
+        <small>Administrator</small>
+      </div>
+      <a class="back-link" href="../">← Powrót do portfolio</a>
+    </aside>
+
+    <main id="main">
+      <header class="topbar">
+        <button class="menu-button" type="button" aria-label="Otwórz menu">☰</button>
+        <label class="global-search"><span>⌕</span><input type="search" placeholder="Szukaj leada, firmy lub tematu…" aria-label="Szukaj leadów"></label>
+        <div class="top-actions"><span class="system-status"><i></i> System działa</span><button class="icon-button" type="button" aria-label="Powiadomienia">♢<b>3</b></button><button class="avatar-button" type="button">OP</button></div>
+      </header>
+
+      <div class="content">
+        <section class="page-head" id="dashboard">
+          <div><p class="overline">CENTRUM SPRZEDAŻY</p><h1>Dzień dobry.<br><em>Co dziś domykamy?</em></h1><p>Wszystkie zapytania, następne kroki i szkice odpowiedzi w jednym miejscu.</p></div>
+          <div class="page-actions"><button class="secondary-button reset-demo" type="button">↻ Reset demo</button><button class="primary-button add-lead" type="button"><span>+</span> Dodaj lead</button></div>
+        </section>
+
+        <section class="demo-flow panel" aria-labelledby="flow-title">
+          <div class="flow-intro">
+            <p class="overline">INTERAKTYWNA SYMULACJA</p>
+            <h2 id="flow-title">Zobacz, co dzieje się po wysłaniu zapytania</h2>
+            <p>Demo pokazuje kolejne warstwy systemu. Dane nie opuszczają tej karty i po odświeżeniu znikają.</p>
+            <button class="primary-button run-flow" type="button"><span>▶</span> Wyślij przykładowy lead</button>
+          </div>
+          <div class="flow-workbench">
+            <ol class="flow-stages" aria-label="Przepływ danych">
+              <li data-flow-step="form"><i>01</i><span><strong>Formularz / widget</strong><small>użytkownik wysyła zapytanie</small></span></li>
+              <li data-flow-step="api"><i>02</i><span><strong>API na brzegu</strong><small>limit ruchu i kontrola origin</small></span></li>
+              <li data-flow-step="validation"><i>03</i><span><strong>Walidacja</strong><small>format, długość i wymagane pola</small></span></li>
+              <li data-flow-step="database"><i>04</i><span><strong>Baza D1</strong><small>zapis leada i historii zdarzeń</small></span></li>
+              <li data-flow-step="ai"><i>05</i><span><strong>Kwalifikacja AI</strong><small>podsumowanie i priorytet</small></span></li>
+              <li data-flow-step="dashboard"><i>06</i><span><strong>Panel sprzedaży</strong><small>lead trafia do pipeline</small></span></li>
+            </ol>
+            <div class="flow-console"><div><span></span><span></span><span></span><strong>ZDARZENIA BACKENDU · SYMULACJA</strong></div><pre data-flow-log aria-live="polite">Gotowe. Kliknij „Wyślij przykładowy lead”.</pre></div>
+          </div>
+        </section>
+
+        <section class="metrics" aria-label="Podsumowanie lejka">
+          <article><div><span>NOWE ZAPYTANIA</span><small>aktualny zestaw</small></div><strong data-metric="new">0</strong><i class="metric-icon">↗</i></article>
+          <article><div><span>ZAKWALIFIKOWANE</span><small>gotowe do kontaktu</small></div><strong data-metric="qualified">0</strong><i class="metric-icon">✓</i></article>
+          <article><div><span>WYSŁANE OFERTY</span><small>oczekują na decyzję</small></div><strong data-metric="offer">0</strong><i class="metric-icon">▤</i></article>
+          <article class="metric-value"><div><span>WARTOŚĆ PIPELINE</span><small>suma danych demo</small></div><strong data-metric="value">0 zł</strong><i class="metric-icon">◇</i></article>
+        </section>
+
+        <section class="dashboard-grid">
+          <div class="pipeline-panel panel" id="pipeline">
+            <div class="panel-head"><div><p class="overline">PIPELINE</p><h2>Leady według etapu</h2></div><div class="panel-tools"><button class="compact-button" type="button" data-filter="all">Wszystkie</button><button class="icon-button" type="button" aria-label="Więcej opcji">•••</button></div></div>
+            <div class="pipeline-board" data-pipeline></div>
+          </div>
+
+          <aside class="insights-column">
+            <section class="ai-insight panel" id="automation">
+              <div class="ai-insight-head"><span class="ai-badge">AI</span><div><p class="overline">ASYSTENT SPRZEDAŻY</p><h2>Następny najlepszy krok</h2></div></div>
+              <div class="focus-score"><span>PRIORYTET</span><strong>82<small>/100</small></strong><div><i style="width:82%"></i></div></div>
+              <p data-ai-insight>Lead LD-0142 podał budżet i konkretny problem. Warto odpowiedzieć dzisiaj, prosząc o technologię obecnej strony.</p>
+              <button class="primary-button full open-priority" type="button">Otwórz priorytetowy lead <span>→</span></button>
+              <small class="privacy-note">AI przygotowuje szkice. Nic nie jest wysyłane automatycznie.</small>
+            </section>
+
+            <section class="activity-panel panel">
+              <div class="panel-head"><div><p class="overline">AKTYWNOŚĆ</p><h2>Ostatnie zdarzenia</h2></div><button class="icon-button" type="button" aria-label="Odśwież">↻</button></div>
+              <ol class="activity-list" data-activity></ol>
+            </section>
+          </aside>
+        </section>
+
+        <section class="leads-panel panel" id="leads">
+          <div class="panel-head"><div><p class="overline">BAZA</p><h2>Wszystkie zapytania</h2></div><div class="panel-tools"><label class="table-filter"><span>⌕</span><input type="search" placeholder="Filtruj tabelę" aria-label="Filtruj tabelę leadów"></label><button class="compact-button export-demo" type="button">Eksport CSV</button></div></div>
+          <div class="table-wrap"><table><thead><tr><th>Lead</th><th>Źródło</th><th>Temat</th><th>Budżet</th><th>Status</th><th>Następny krok</th><th></th></tr></thead><tbody data-lead-table></tbody></table></div>
+        </section>
+
+        <section class="reports-row" id="reports">
+          <article class="panel source-card"><div class="panel-head"><div><p class="overline">ŹRÓDŁA</p><h2>Skąd przychodzą zapytania</h2></div></div><div class="source-chart" data-source-chart></div></article>
+          <article class="panel automation-card"><div class="panel-head"><div><p class="overline">AUTOMATYZACJE</p><h2>Aktywne reguły</h2></div></div><ul><li><i>✓</i><span><strong>Nowy lead z widgetu</strong><small>Zapis + powiadomienie</small></span><b>AKTYWNA</b></li><li><i>✓</i><span><strong>Kwalifikacja AI</strong><small>Podsumowanie i priorytet</small></span><b>AKTYWNA</b></li><li><i>✓</i><span><strong>Brak kontaktu 24 h</strong><small>Przypomnienie w panelu</small></span><b>AKTYWNA</b></li></ul></article>
+        </section>
+
+        <footer><span>LeadDesk AI · OPS/LAB</span><span>Panel demonstracyjny · 2026</span></footer>
+      </div>
+    </main>
+  </div>
+
+  <div class="drawer-backdrop" data-close-drawer></div>
+  <aside class="lead-drawer" aria-hidden="true" aria-labelledby="drawer-title">
+    <header><div><p class="overline">SZCZEGÓŁY LEADA</p><h2 id="drawer-title">—</h2></div><button class="icon-button close-drawer" type="button" aria-label="Zamknij">×</button></header>
+    <div class="drawer-body">
+      <div class="lead-summary"><span class="lead-avatar">LD</span><div><strong data-drawer-company>—</strong><small data-drawer-contact>—</small></div><span class="status-pill" data-drawer-status>—</span></div>
+      <section><p class="overline">POTRZEBA</p><h3 data-drawer-topic>—</h3><p data-drawer-message>—</p></section>
+      <dl><div><dt>Źródło</dt><dd data-drawer-source>—</dd></div><div><dt>Budżet</dt><dd data-drawer-budget>—</dd></div><div><dt>Dodano</dt><dd data-drawer-created>—</dd></div><div><dt>Priorytet AI</dt><dd data-drawer-score>—</dd></div></dl>
+      <section class="ai-summary"><p class="overline">PODSUMOWANIE AI</p><p data-drawer-summary>—</p></section>
+      <section class="draft-box" hidden><div><p class="overline">SZKIC ODPOWIEDZI · NIE WYSŁANO</p><button class="copy-draft" type="button">Kopiuj</button></div><strong data-draft-subject></strong><p data-draft-body></p></section>
+      <label class="status-select">Zmień etap<select data-status-select><option value="new">Nowy</option><option value="qualified">Zakwalifikowany</option><option value="offer">Oferta</option><option value="won">Wygrany</option><option value="lost">Utracony</option></select></label>
+    </div>
+    <footer><button class="secondary-button create-offer" type="button">Podgląd oferty</button><button class="primary-button generate-draft" type="button"><span>AI</span> Przygotuj szkic</button></footer>
+  </aside>
+
+  <dialog class="lead-modal">
+    <form method="dialog" class="modal-card" data-lead-form>
+      <header><div><p class="overline">NOWE ZAPYTANIE</p><h2>Dodaj lead demonstracyjny</h2></div><button class="icon-button" value="cancel" aria-label="Zamknij">×</button></header>
+      <div class="form-grid"><label>Identyfikator<input name="name" value="Zapytanie demonstracyjne" required></label><label>E-mail<input name="email" type="email" value="kontakt@example.com" required></label><label class="wide">Temat<input name="topic" value="Automatyzacja procesu sprzedaży" required></label><label>Budżet<select name="budget"><option>3–5 tys. zł</option><option>5–8 tys. zł</option><option>Do ustalenia</option></select></label><label>Źródło<select name="source"><option>Widget AI</option><option>Formularz WWW</option><option>E-mail</option></select></label><label class="wide">Opis<textarea name="message" rows="4" required>Potrzebujemy uporządkować obsługę zapytań ze strony.</textarea></label></div>
+      <p class="modal-note">W publicznym demo wpisy pozostają wyłącznie w pamięci bieżącej karty.</p>
+      <footer><button class="secondary-button" value="cancel">Anuluj</button><button class="primary-button" value="default">Dodaj do pipeline</button></footer>
+    </form>
+  </dialog>
+
+  <dialog class="offer-modal">
+    <article class="offer-sheet"><header><div><span>OPS/LAB</span><strong>OFERTA WSTĘPNA</strong></div><button class="icon-button close-offer" type="button" aria-label="Zamknij">×</button></header><p class="offer-id" data-offer-id></p><h2 data-offer-title></h2><p data-offer-intro></p><div class="offer-grid"><section><span>PROPONOWANY ZAKRES</span><ul><li>Analiza procesu i danych wejściowych</li><li>Konfiguracja panelu oraz etapów</li><li>Automatyzacja wybranego przepływu</li><li>Testy i instrukcja przekazania</li></ul></section><section><span>DO USTALENIA</span><p>Integracje, liczba użytkowników, sposób powiadomień oraz termin realizacji.</p></section></div><footer><p>Dokument demonstracyjny — nie stanowi oferty handlowej.</p><button class="primary-button print-offer" type="button">Drukuj / zapisz PDF</button></footer></article>
+  </dialog>
+
+  <section class="auth-screen" hidden>
+    <form class="auth-card"><span class="logo-mark">LD</span><p class="overline">PANEL PRYWATNY</p><h1>Zaloguj się do LeadDesk</h1><p>Sesja administratora jest przechowywana w bezpiecznym cookie.</p><label>Hasło<input type="password" name="password" minlength="12" required autocomplete="current-password"></label><button class="primary-button full" type="submit">Zaloguj</button><span class="auth-error" role="alert"></span></form>
+  </section>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="app.min.js?v=20260912-1"></script>
+</body>
+</html>

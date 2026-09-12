@@ -39,6 +39,15 @@ Worker, kontrolowaną bazą wiedzy, ograniczeniem nadużyć i bezpiecznym wywoł
 modelu bez klucza w przeglądarce. Publiczne repozytorium pokazuje interfejs oraz
 architekturę rozwiązania. Kod backendu, prompt i baza wiedzy pozostają prywatne.
 
+## LeadDesk AI — interaktywne demo
+
+Publiczny symulator pokazuje pełną drogę zapytania: formularz, kontrolę API,
+walidację, zapis, kwalifikację AI i pojawienie się leada w panelu sprzedaży.
+W demo dane zostają wyłącznie w pamięci karty. Produkcyjny Worker, migracje D1,
+logowanie, prompty i testy są utrzymywane w oddzielnym prywatnym repozytorium.
+
+**[Uruchom demo LeadDesk AI](https://an0th3r.github.io/ops-lab-portfolio/leaddesk/)**
+
 ## Szybki test
 
 Wymagany jest Python 3.11 lub nowszy. Nie trzeba instalować żadnych bibliotek.
@@ -95,10 +104,12 @@ examples/           bezpieczne dane i konfiguracje demonstracyjne
 docs/               strona portfolio, wynik testów i opis architektury
 docs/animation/     animacja SVG i samodzielna strona podglądu
 docs/ai-assistant-widget.min.js  zminimalizowany widget demonstracyjny
+docs/leaddesk/      minifikowany symulator przepływu LeadDesk AI
 ```
 
 ## Licencja
 
 MIT obejmuje trzy narzędzia Python, ich testy, przykłady i animację SVG. Projekt
-strony oraz widget AI są wyłączone z MIT i objęte zasadą „all rights reserved”.
+strony, widget AI oraz publiczny interfejs LeadDesk są wyłączone z MIT i objęte
+zasadą „all rights reserved”.
 Dokładny zakres znajduje się w pliku [LICENSE](LICENSE).

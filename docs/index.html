@@ -14,7 +14,7 @@
   <meta property="og:description" content="Publiczny kod, dokumentacja i testy. Automatyzacje IT oraz asystent AI, które można sprawdzić przed zleceniem.">
   <meta property="og:url" content="https://an0th3r.github.io/ops-lab-portfolio/">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070b12'/%3E%3Cpath d='M18 20h28v9H18zm0 15h28v9H18z' fill='none' stroke='%235de4c7' stroke-width='4'/%3E%3Ccircle cx='24' cy='24.5' r='2' fill='%235de4c7'/%3E%3Ccircle cx='24' cy='39.5' r='2' fill='%235de4c7'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=20260912-2">
+  <link rel="stylesheet" href="styles.css?v=20260912-3">
 </head>
 <body>
   <a class="skip-link" href="#realizacje">Przejdź do projektów</a>
@@ -26,7 +26,7 @@
     <nav aria-label="Główna nawigacja">
       <a href="#kod">Narzędzia</a>
       <a href="#asystent-ai">Asystent AI</a>
-      <a href="#animacja">Animacja</a>
+      <a href="#leaddesk">LeadDesk</a>
       <a href="#realizacje">Projekty</a>
       <a href="#kompetencje">Kompetencje</a>
       <a href="#kontakt">Kontakt</a>
@@ -146,6 +146,36 @@
             <div class="ai-message ai-message-bot"><small>ASYSTENT</small><p>Tak. Do wstępnej oceny potrzebny jest system serwera, lista usług i oczekiwany zakres kopii. Przed zmianami powstaje plan odtworzenia.</p></div>
           </div>
           <dl class="ai-metrics"><div><dt>API</dt><dd>Cloudflare Worker</dd></div><div><dt>OCHRONA</dt><dd>4 zapytania / min</dd></div><div><dt>DANE</dt><dd>bez trwałego zapisu</dd></div></dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section leaddesk-section" id="leaddesk" aria-labelledby="leaddesk-title">
+      <div class="leaddesk-showcase">
+        <div class="leaddesk-copy">
+          <p class="eyebrow"><span></span> INTERAKTYWNY PRODUKT · AI + MINI CRM</p>
+          <h2 id="leaddesk-title">Lead wpada.<br>System robi porządek.</h2>
+          <p>LeadDesk zbiera zapytania, pokazuje ich drogę przez backend, kwalifikuje priorytet i przygotowuje szkic odpowiedzi do zatwierdzenia. Publiczne demo działa bez prawdziwych danych i bez dostępu do prywatnego kodu serwera.</p>
+          <ul class="leaddesk-points">
+            <li><span>01</span><strong>Lejek i baza leadów</strong><small>Statusy, filtry, historia i następny krok.</small></li>
+            <li><span>02</span><strong>Kwalifikacja oraz szkice AI</strong><small>AI pomaga, ale niczego nie wysyła samodzielnie.</small></li>
+            <li><span>03</span><strong>Backend pozostaje prywatny</strong><small>Baza, logowanie, prompty i zabezpieczenia nie są publikowane.</small></li>
+          </ul>
+          <div class="ai-product-actions">
+            <a class="button button-primary" href="leaddesk/">Uruchom pełne demo <span aria-hidden="true">↗</span></a>
+            <a class="button button-ghost" href="#kontakt">Zapytaj o wdrożenie</a>
+          </div>
+        </div>
+        <div class="leaddesk-visual" aria-label="Przepływ zapytania przez LeadDesk AI">
+          <header><span>LEADDESK / EVENT STREAM</span><strong><i></i> DEMO READY</strong></header>
+          <ol>
+            <li><b>01</b><span><strong>Formularz lub widget</strong><small>nowe zapytanie</small></span><em>200 OK</em></li>
+            <li><b>02</b><span><strong>Walidacja API</strong><small>origin · limit ruchu · format</small></span><em>PASS</em></li>
+            <li><b>03</b><span><strong>Prywatna baza D1</strong><small>lead + historia zdarzeń</small></span><em>STORED</em></li>
+            <li><b>04</b><span><strong>Kwalifikacja AI</strong><small>priorytet · podsumowanie · krok</small></span><em>86/100</em></li>
+            <li><b>05</b><span><strong>Panel sprzedaży</strong><small>pipeline + szkic do akceptacji</small></span><em>READY</em></li>
+          </ol>
+          <footer><span>PUBLICZNIE</span> interfejs demonstracyjny <i>·</i> <span>PRYWATNIE</span> backend i logika produktu</footer>
         </div>
       </div>
     </section>
