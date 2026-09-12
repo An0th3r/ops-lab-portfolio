@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Trzysekundowa animacja SVG pokazująca składanie płaskiej siatki w opakowanie.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#ebe7df">
+  <link rel="canonical" href="https://an0th3r.github.io/ops-lab-portfolio/animation/">
+  <title>Animacja SVG — składanie opakowania | OPS/LAB</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; padding: 28px; display: grid; place-items: center; color: #17191e; background: #ebe7df; font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { width: min(1100px, 100%); overflow: hidden; border: 1px solid rgba(23,25,30,.1); border-radius: 30px; background: #f8f6f1; box-shadow: 0 28px 80px rgba(23,25,30,.12); }
+    header { padding: 34px 40px 22px; }
+    .back { display: inline-block; margin-bottom: 26px; color: #555861; font-size: 14px; font-weight: 750; text-decoration: none; }
+    .back:hover, .back:focus-visible { color: #17191e; }
+    .meta { margin: 0 0 12px; color: #347466; font-size: 12px; font-weight: 850; letter-spacing: .13em; }
+    h1 { margin: 0; font-size: clamp(30px, 5vw, 58px); line-height: 1; letter-spacing: -.045em; }
+    p { margin: 12px 0 0; color: #656871; font-size: 16px; }
+    .stage { min-height: 560px; margin: 0 20px 20px; overflow: hidden; border-radius: 22px; background-color: #fff; background-image: linear-gradient(rgba(21,23,28,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(21,23,28,.035) 1px, transparent 1px); background-size: 32px 32px; }
+    object { display: block; width: 100%; height: 560px; }
+    footer { padding: 0 40px 30px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; color: #656871; font-size: 13px; }
+    footer a { color: #17191e; font-weight: 800; }
+    @media (max-width: 650px) { body { padding: 10px; } header { padding: 27px 25px 18px; } .stage { min-height: 390px; } object { height: 390px; } footer { padding: 0 25px 25px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <a class="back" href="../">← Wróć do portfolio</a>
+      <p class="meta">SAMODZIELNA PRÓBKA · SVG · 3 SEKUNDY</p>
+      <h1>Składanie opakowania</h1>
+      <p>Animacja demonstracyjna wykonana bez zewnętrznych bibliotek.</p>
+    </header>
+    <section class="stage">
+      <object type="image/svg+xml" data="folding-box-demo.svg" aria-label="Animacja składania opakowania">
+        <a href="folding-box-demo.svg">Otwórz animację SVG</a>
+      </object>
+    </section>
+    <footer><span>Przezroczyste tło · skalowalny wektor · pętla</span><a href="https://github.com/An0th3r/ops-lab-portfolio/blob/main/docs/animation/folding-box-demo.svg">Zobacz kod SVG ↗</a></footer>
+  </main>
+</body>
+</html>

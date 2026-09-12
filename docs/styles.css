@@ -94,6 +94,17 @@ h1 em { color: var(--muted); font-style: normal; font-weight: 500; }
 .test-proof p { grid-column: 2; margin: .25rem 0 0; color: var(--muted); font-size: .82rem; }
 .test-status { grid-row: 1 / span 2; padding: .7rem .8rem; border: 1px solid rgba(93,228,199,.3); background: rgba(93,228,199,.07); color: var(--accent); font: 800 .75rem ui-monospace, SFMono-Regular, Menlo, monospace; white-space: nowrap; }
 
+.motion-section { padding-top: 3rem; }
+.motion-layout { display: grid; grid-template-columns: minmax(340px, .82fr) minmax(0, 1.18fr); border: 1px solid var(--line); background: var(--surface); overflow: hidden; }
+.motion-copy { padding: clamp(2rem, 5vw, 4rem); display: flex; flex-direction: column; justify-content: center; }
+.motion-copy h2 { margin-bottom: 1.4rem; font-size: clamp(2.5rem, 4.5vw, 4.7rem); line-height: .98; letter-spacing: -.05em; }
+.motion-copy > p { color: var(--muted); }
+.motion-actions { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: .75rem; }
+.motion-actions .button { gap: 1.3rem; }
+.motion-note { margin: 1rem 0 0; font-size: .78rem; }
+.motion-stage { min-height: 590px; display: grid; place-items: center; padding: clamp(1rem, 3vw, 2.2rem); background-color: #f4f1ea; background-image: linear-gradient(rgba(21,23,28,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(21,23,28,.045) 1px, transparent 1px); background-size: 32px 32px; }
+.motion-stage object { width: 100%; height: 100%; min-height: 520px; }
+
 .section { max-width: var(--max); margin: 0 auto; padding: 7rem 2rem; }
 .section-heading { margin-bottom: 3.5rem; display: grid; grid-template-columns: 1.2fr .8fr; gap: 4rem; align-items: end; }
 .section-heading h2 { margin-bottom: 0; font-size: clamp(2.3rem, 4.2vw, 4.4rem); line-height: 1; letter-spacing: -.045em; }
@@ -219,6 +230,9 @@ footer .brand-mark { width: 28px; height: 28px; padding: 6px; }
   .featured-project { grid-template-columns: 50px 1fr; }
   .architecture { grid-column: 2; }
   .skill-matrix { grid-template-columns: repeat(2, 1fr); }
+  .motion-layout { grid-template-columns: 1fr; }
+  .motion-stage { min-height: 500px; }
+  .motion-stage object { min-height: 440px; }
   .code-grid { grid-template-columns: 1fr; }
   .code-grid article { min-height: 300px; border-right: 0; border-bottom: 1px solid var(--line); }
   .code-grid article:last-child { border-bottom: 0; }
@@ -248,6 +262,10 @@ footer .brand-mark { width: 28px; height: 28px; padding: 6px; }
   .test-proof p { grid-column: 1; }
   .test-status { grid-row: auto; }
   .project-card { min-height: 330px; }
+  .motion-section { padding-top: 2rem; }
+  .motion-copy { padding: 2rem 1.25rem; }
+  .motion-stage { min-height: 360px; padding: .5rem; }
+  .motion-stage object { min-height: 340px; }
   .skill-matrix article, .skill-matrix article:nth-child(2n), .skill-matrix article:nth-child(3n), .skill-matrix article:nth-child(n+4), .skill-matrix article:nth-child(n+5) { min-height: auto; border-right: 0; border-bottom: 1px solid var(--line); }
   .skill-matrix article:last-child { border-bottom: 0; }
   .skill-matrix p { min-height: 0; }

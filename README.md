@@ -5,9 +5,9 @@
 ![Python](https://img.shields.io/badge/Python-3.11%2B-71a7ff?style=for-the-badge)
 [![Licencja MIT](https://img.shields.io/badge/licencja-MIT-9baabc?style=for-the-badge)](LICENSE)
 
-To nie są makiety ani opisy fikcyjnych zleceń. Repozytorium zawiera trzy małe,
-uruchamialne narzędzia demonstracyjne napisane wyłącznie z użyciem biblioteki
-standardowej Pythona. Każde ma testy i bezpieczne ustawienia domyślne.
+Repozytorium zawiera trzy małe, uruchamialne narzędzia demonstracyjne napisane
+wyłącznie z użyciem biblioteki standardowej Pythona. Każde ma testy i bezpieczne
+ustawienia domyślne.
 
 **[Zobacz portfolio online](https://an0th3r.github.io/ops-lab-portfolio/)** ·
 **[Wynik testów](docs/TEST-RESULTS.md)** ·
@@ -22,6 +22,15 @@ Strona jest publikowana bezpłatnie z katalogu `docs/` przez GitHub Pages.
 | `backup_guard` | Tworzy ZIP z manifestem SHA-256, weryfikuje go, rotuje archiwa i bezpiecznie odtwarza dane | backup jest sprawdzalny, a odtworzenie blokuje niebezpieczne ścieżki |
 | `service_watch` | Kontroluje HTTP, TCP, certyfikat TLS i wolne miejsce; zapisuje raport JSON lub Markdown | monitoring daje konkretną diagnozę i poprawny kod wyjścia dla automatyzacji |
 | `release_guard` | Tworzy wersjonowane wydania, wykonuje healthcheck, atomowo przełącza wersję i pozwala zrobić rollback | błędne wydanie nie zastępuje działającej wersji |
+
+## Dodatkowy projekt: animacja SVG
+
+Trzysekundowa animacja składania płaskiej siatki w przestrzenne opakowanie,
+wykonana bez zewnętrznych bibliotek. Publiczny podgląd ma znak wodny
+`DEMO / PORTFOLIO`.
+
+**[Otwórz animację](https://an0th3r.github.io/ops-lab-portfolio/animation/)** ·
+**[Zobacz kod SVG](docs/animation/folding-box-demo.svg)**
 
 ## Szybki test
 
@@ -63,10 +72,10 @@ python -m release_guard rollback --target .\demo-output\app
 
 ## Granice projektu
 
-To laboratorium techniczne, nie historia wdrożenia dla fikcyjnego klienta.
-Narzędzia nie pobierają haseł, nie zmieniają zapory i nie łączą się przez SSH.
-Przed użyciem produkcyjnym zakres backupu, retencję, alerty i procedurę powrotu
-trzeba dopasować do konkretnego serwera.
+To portfolio techniczne prezentujące rozwiązania przygotowane i przetestowane
+w środowisku demonstracyjnym. Narzędzia nie pobierają haseł, nie zmieniają zapory
+i nie łączą się przez SSH. Przed użyciem produkcyjnym zakres backupu, retencję,
+alerty i procedurę powrotu trzeba dopasować do konkretnego serwera.
 
 ## Struktura
 
@@ -77,6 +86,7 @@ release_guard/      wersjonowane wdrożenia i rollback
 tests/              testy jednostkowe oraz integracyjne
 examples/           bezpieczne dane i konfiguracje demonstracyjne
 docs/               strona portfolio, wynik testów i opis architektury
+docs/animation/     animacja SVG i samodzielna strona podglądu
 ```
 
 ## Licencja

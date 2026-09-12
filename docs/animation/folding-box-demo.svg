@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Animacja składania opakowania</title>
+  <desc id="desc">Trzysekundowa animacja SVG pokazująca przejście od płaskiej siatki do przestrzennego pudełka.</desc>
+
+  <style>
+    .panel {
+      fill: #fff;
+      fill-opacity: .92;
+      stroke: #111318;
+      stroke-width: 7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      vector-effect: non-scaling-stroke;
+    }
+    .fold {
+      fill: none;
+      stroke: #111318;
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-dasharray: 14 14;
+      vector-effect: non-scaling-stroke;
+      animation: guide 3s ease-in-out infinite;
+    }
+    .hinge {
+      fill: #fff;
+      stroke: #111318;
+      stroke-width: 5;
+      vector-effect: non-scaling-stroke;
+      animation: hinge 3s ease-in-out infinite;
+    }
+    .scene {
+      transform-origin: 600px 360px;
+      animation: scene 3s ease-in-out infinite;
+    }
+    @keyframes guide {
+      0%, 12% { opacity: .52; stroke-dashoffset: 70; }
+      55% { opacity: .18; stroke-dashoffset: 0; }
+      72%, 100% { opacity: 0; }
+    }
+    @keyframes hinge {
+      0%, 12% { opacity: 0; transform: scale(.65); }
+      20%, 52% { opacity: 1; transform: scale(1); }
+      68%, 100% { opacity: 0; transform: scale(.65); }
+    }
+    @keyframes scene {
+      0% { opacity: 0; transform: scale(.97); }
+      7%, 88% { opacity: 1; transform: scale(1); }
+      97%, 100% { opacity: 0; transform: scale(.985); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .scene, .fold, .hinge { animation: none; }
+    }
+  </style>
+
+  <g class="scene">
+    <polygon class="panel" points="480,360 720,360 720,500 480,500">
+      <animate attributeName="points" dur="3s" repeatCount="indefinite"
+        values="480,360 720,360 720,500 480,500;
+                480,360 720,360 720,500 480,500;
+                600,360 785,445 600,535 415,445;
+                600,360 785,445 600,535 415,445"
+        keyTimes="0;0.16;0.60;1" calcMode="spline"
+        keySplines=".4 0 .2 1;.2 .8 .2 1;.4 0 .2 1" />
+    </polygon>
+
+    <polygon class="panel" points="480,360 720,360 720,220 480,220">
+      <animate attributeName="points" dur="3s" repeatCount="indefinite"
+        values="480,360 720,360 720,220 480,220;
+                480,360 720,360 720,220 480,220;
+                600,360 785,445 785,285 600,200;
+                600,360 785,445 785,285 600,200"
+        keyTimes="0;0.18;0.43;1" calcMode="spline"
+        keySplines=".4 0 .2 1;.16 .84 .28 1;.4 0 .2 1" />
+    </polygon>
+
+    <polygon class="panel" points="480,500 480,360 310,360 310,500">
+      <animate attributeName="points" dur="3s" repeatCount="indefinite"
+        values="480,500 480,360 310,360 310,500;
+                480,500 480,360 310,360 310,500;
+                415,445 600,360 600,200 415,285;
+                415,445 600,360 600,200 415,285"
+        keyTimes="0;0.28;0.53;1" calcMode="spline"
+        keySplines=".4 0 .2 1;.16 .84 .28 1;.4 0 .2 1" />
+    </polygon>
+
+    <polygon class="panel" points="720,360 720,500 890,500 890,360">
+      <animate attributeName="points" dur="3s" repeatCount="indefinite"
+        values="720,360 720,500 890,500 890,360;
+                720,360 720,500 890,500 890,360;
+                785,445 600,535 600,375 785,285;
+                785,445 600,535 600,375 785,285"
+        keyTimes="0;0.36;0.61;1" calcMode="spline"
+        keySplines=".4 0 .2 1;.16 .84 .28 1;.4 0 .2 1" />
+    </polygon>
+
+    <polygon class="panel" points="720,500 480,500 480,640 720,640">
+      <animate attributeName="points" dur="3s" repeatCount="indefinite"
+        values="720,500 480,500 480,640 720,640;
+                720,500 480,500 480,640 720,640;
+                600,535 415,445 415,285 600,375;
+                600,535 415,445 415,285 600,375"
+        keyTimes="0;0.44;0.69;1" calcMode="spline"
+        keySplines=".4 0 .2 1;.16 .84 .28 1;.4 0 .2 1" />
+    </polygon>
+
+    <polygon class="panel" points="480,220 720,220 720,80 480,80">
+      <animate attributeName="points" dur="3s" repeatCount="indefinite"
+        values="480,220 720,220 720,80 480,80;
+                480,220 720,220 720,80 480,80;
+                600,200 785,285 600,375 415,285;
+                600,200 785,285 600,375 415,285"
+        keyTimes="0;0.55;0.77;1" calcMode="spline"
+        keySplines=".4 0 .2 1;.12 .88 .22 1;.4 0 .2 1" />
+    </polygon>
+
+    <g class="fold">
+      <path d="M480 360H720" />
+      <path d="M480 500H720" />
+      <path d="M480 360V500" />
+      <path d="M720 360V500" />
+      <path d="M480 220H720" />
+    </g>
+
+    <g class="hinge">
+      <circle cx="600" cy="360" r="12" style="transform-origin:600px 360px" />
+      <circle cx="480" cy="430" r="12" style="transform-origin:480px 430px;animation-delay:.28s" />
+      <circle cx="720" cy="430" r="12" style="transform-origin:720px 430px;animation-delay:.54s" />
+      <circle cx="600" cy="500" r="12" style="transform-origin:600px 500px;animation-delay:.82s" />
+    </g>
+  </g>
+
+  <g aria-hidden="true" pointer-events="none" opacity=".16"
+     transform="rotate(-18 600 360)" fill="#111318"
+     font-family="Arial, Helvetica, sans-serif" font-weight="700"
+     text-anchor="middle">
+    <text x="600" y="342" font-size="68" letter-spacing="10">DEMO</text>
+    <text x="600" y="402" font-size="28" letter-spacing="7">PORTFOLIO</text>
+  </g>
+</svg>

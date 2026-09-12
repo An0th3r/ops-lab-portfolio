@@ -25,6 +25,7 @@
     </a>
     <nav aria-label="Główna nawigacja">
       <a href="#kod">Kod i testy</a>
+      <a href="#animacja">Animacja</a>
       <a href="#realizacje">Projekty</a>
       <a href="#kompetencje">Kompetencje</a>
       <a href="#kontakt">Kontakt</a>
@@ -43,9 +44,9 @@
           <a class="button button-ghost" href="https://github.com/An0th3r/ops-lab-portfolio" target="_blank" rel="noreferrer">Otwórz GitHub ↗</a>
         </div>
         <ul class="trust-list" aria-label="Najważniejsze zasady pracy">
-          <li><span>01</span> 3 działające narzędzia</li>
-          <li><span>02</span> 8/8 testów</li>
-          <li><span>03</span> Dokumentacja po polsku</li>
+          <li><span>✓</span> Działający kod</li>
+          <li><span>✓</span> Testy przed oddaniem</li>
+          <li><span>✓</span> Dokumentacja po polsku</li>
         </ul>
       </div>
 
@@ -74,7 +75,7 @@
             <p><span class="muted">→</span> backup_guard <span class="ok">3 tests ok</span></p>
             <p><span class="muted">→</span> service_watch <span class="ok">2 tests ok</span></p>
             <p><span class="muted">→</span> release_guard <span class="ok">3 tests ok</span></p>
-            <p><span class="muted">→</span> unsafe paths / failed healthcheck <span class="ok">blocked</span></p>
+            <p><span class="muted">→</span> scenariusze awaryjne <span class="ok">zabezpieczone</span></p>
             <p class="terminal-result">Ran 8 tests — OK<span class="cursor">_</span></p>
           </div>
         </div>
@@ -82,7 +83,7 @@
     </section>
 
     <section class="proof-strip" aria-label="Obszary techniczne">
-      <span>PYTHON</span><i></i><span>SHA-256</span><i></i><span>HTTP / TLS</span><i></i><span>ZIP</span><i></i><span>JSON</span><i></i><span>ROLLBACK</span>
+      <span>PYTHON</span><i></i><span>AUTOMATYZACJE</span><i></i><span>BACKUP</span><i></i><span>MONITORING</span><i></i><span>TESTY</span><i></i><span>ROLLBACK</span>
     </section>
 
     <section class="section code-section" id="kod" aria-labelledby="code-title">
@@ -114,23 +115,44 @@
         </article>
       </div>
       <div class="test-proof">
-        <div><span class="test-status">8 / 8 PASS</span><strong>Testy obejmują również sytuacje awaryjne</strong><p>Uszkodzona ścieżka backupu, błędny status usługi, nieudany healthcheck i rollback.</p></div>
+        <div><span class="test-status">8 / 8 PASS</span><strong>Testy obejmują również sytuacje awaryjne</strong><p>Sprawdzamy uszkodzone archiwum, niedostępną usługę oraz nieudane wdrożenie.</p></div>
         <a class="button button-ghost" href="https://github.com/An0th3r/ops-lab-portfolio/tree/main/tests" data-repo-path="tree/main/tests">Otwórz testy <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="section motion-section" id="animacja" aria-labelledby="motion-title">
+      <div class="motion-layout">
+        <div class="motion-copy">
+          <p class="eyebrow"><span></span> DODATKOWY PROJEKT · SVG</p>
+          <h2 id="motion-title">Płaska siatka.<br>Gotowe opakowanie.</h2>
+          <p>Trzysekundowa animacja produktowa przygotowana jako samodzielna próbka portfolio. Geometria zmienia się płynnie od wykrojnika do przestrzennego pudełka.</p>
+          <ul class="tag-list"><li>Czysty SVG</li><li>CSS + SMIL</li><li>3 s loop</li><li>Responsive</li></ul>
+          <div class="motion-actions">
+            <a class="button button-primary" href="animation/">Uruchom animację <span>↗</span></a>
+            <a class="button button-ghost" href="https://github.com/An0th3r/ops-lab-portfolio/blob/main/docs/animation/folding-box-demo.svg" target="_blank" rel="noreferrer">Zobacz kod SVG</a>
+          </div>
+          <p class="motion-note">Publiczny podgląd zawiera znak wodny DEMO / PORTFOLIO.</p>
+        </div>
+        <div class="motion-stage">
+          <object type="image/svg+xml" data="animation/folding-box-demo.svg" aria-label="Animacja składania opakowania">
+            <a href="animation/folding-box-demo.svg">Otwórz animację SVG</a>
+          </object>
+        </div>
       </div>
     </section>
 
     <section class="section projects-preview" id="realizacje" aria-labelledby="projects-title">
       <div class="section-heading">
         <div><p class="eyebrow"><span></span> PROJEKTY I SCENARIUSZE</p><h2 id="projects-title">Najpierw dowód.<br>Potem obietnica.</h2></div>
-        <p>Pozycje 01–03 to działające narzędzia z publicznym kodem i testami. Pozostałe pokazują przygotowany zakres usług — bez udawania realizacji dla fikcyjnych klientów.</p>
+        <p>Trzy pierwsze projekty mają publiczny kod i testy. Pozostałe pokazują przygotowany zakres oraz sposób realizacji konkretnych usług.</p>
       </div>
       <article class="featured-project">
         <div class="project-number">01</div>
         <div class="project-copy">
           <div class="project-meta"><span>BACKUP I ODTWARZANIE</span><span>DZIAŁAJĄCY KOD</span></div>
           <h3>Backup, który da się naprawdę sprawdzić</h3>
-          <p>Backup Guard tworzy archiwum ZIP, zapisuje manifest SHA-256, weryfikuje integralność, pilnuje retencji i blokuje niebezpieczne ścieżki podczas odtwarzania.</p>
-          <ul class="tag-list"><li>Python</li><li>ZIP</li><li>SHA-256</li><li>Safe restore</li></ul>
+          <p>Backup Guard tworzy archiwum kopii, zapisuje sumy kontrolne SHA-256, weryfikuje integralność, pilnuje retencji i bezpiecznie odtwarza pliki.</p>
+          <ul class="tag-list"><li>Python</li><li>Archiwum kopii</li><li>SHA-256</li><li>Safe restore</li></ul>
           <a class="repo-button" href="https://github.com/An0th3r/ops-lab-portfolio/tree/main/backup_guard" data-repo-path="tree/main/backup_guard">Kod projektu <span>↗</span></a>
         </div>
         <div class="architecture" aria-label="Schemat tworzenia i kontroli kopii">
@@ -143,7 +165,7 @@
       </article>
 
       <div class="project-toolbar" aria-label="Filtrowanie projektów">
-        <p><strong>Więcej projektów</strong><span>2 narzędzia + 5 scenariuszy usług</span></p>
+        <p><strong>Więcej projektów</strong><span>Kod oraz zakres przykładowych usług</span></p>
         <div class="filters" role="group" aria-label="Kategorie projektów">
           <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">Wszystkie</button>
           <button class="filter" type="button" data-filter="server" aria-pressed="false">Serwery</button>
@@ -217,7 +239,6 @@
           <button class="case-button" type="button" data-case="deployment">Zobacz zakres <span>↗</span></button>
         </article>
       </div>
-      <p class="portfolio-note"><strong>Pełna przejrzystość:</strong> pozycje 01–03 to uruchamialne narzędzia z publicznym kodem i 8/8 testów. Pozycje 04–08 są opracowanymi scenariuszami usług — nie udają wdrożeń dla fikcyjnych klientów.</p>
     </section>
 
     <section class="competence-section" id="kompetencje" aria-labelledby="skills-title">
@@ -263,7 +284,7 @@
     <section class="section faq-section" aria-labelledby="faq-title">
       <div class="section-heading compact-heading"><div><p class="eyebrow"><span></span> FAQ</p><h2 id="faq-title">Zanim zaczniemy.</h2></div></div>
       <div class="faq-list">
-        <details><summary>Czy projekty w portfolio są prawdziwe?<span>+</span></summary><p>Tak — Backup Guard, Service Watch i Release Guard mają publiczny, uruchamialny kod oraz testy. Pozostałe pozycje są jasno opisanymi scenariuszami usług i nie udają realizacji dla klientów.</p></details>
+        <details><summary>Co można sprawdzić przed zleceniem?<span>+</span></summary><p>Backup Guard, Service Watch i Release Guard mają publiczny, uruchamialny kod oraz testy. Osobno dostępna jest animacja SVG, a pozostałe pozycje prezentują plan realizacji konkretnych usług.</p></details>
         <details><summary>Czy pracujesz bezpośrednio na serwerze produkcyjnym?<span>+</span></summary><p>Tak, gdy wymaga tego zadanie, ale dopiero po ustaleniu zakresu, zabezpieczeniu danych i sposobu powrotu. Proste elementy najpierw odtwarzam w środowisku testowym.</p></details>
         <details><summary>Jak przekazać dostęp?<span>+</span></summary><p>Najlepiej przez tymczasowe konto z minimalnymi uprawnieniami lub bezpieczny kanał platformy. Haseł i kluczy nie należy umieszczać w publicznym opisie zlecenia.</p></details>
         <details><summary>Co dostaję po zakończeniu?<span>+</span></summary><p>Ustalony rezultat, informację o wykonanych zmianach, wynik kontroli oraz krótką instrukcję. Zakres poprawek i wsparcia po wdrożeniu ustalamy przed startem.</p></details>
@@ -289,7 +310,7 @@
     <div class="dialog-grid"><div><span>PROBLEM</span><p id="case-problem"></p></div><div><span>ROZWIĄZANIE</span><p id="case-solution"></p></div><div><span>KONTROLA</span><p id="case-check"></p></div><div><span>PRZEKAZANIE</span><p id="case-handoff"></p></div></div>
   </dialog>
 
-  <footer><div><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span>OPS<span>/</span>LAB</span></a><p>Automatyzacje IT · backup · monitoring · wdrożenia</p></div><p>3 narzędzia · 8/8 testów · publiczny kod · 2026</p></footer>
+  <footer><div><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span>OPS<span>/</span>LAB</span></a><p>Automatyzacje IT · backup · monitoring · wdrożenia</p></div><p>Kod · testy · dokumentacja · 2026</p></footer>
   <script src="script.js"></script>
 </body>
 </html>
