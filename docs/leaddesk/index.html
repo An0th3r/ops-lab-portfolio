@@ -8,7 +8,7 @@
   <meta name="description" content="LeadDesk AI — panel do obsługi zapytań, oceny priorytetu i przygotowywania odpowiedzi.">
   <title>LeadDesk AI — obsługa zapytań</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308121c'/%3E%3Cpath d='M18 18h28v28H18z' fill='none' stroke='%2358e0c2' stroke-width='4'/%3E%3Cpath d='M25 26v12h8m0-12v12h7' fill='none' stroke='%2358e0c2' stroke-width='4'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.min.css?v=20260912-8">
+  <link rel="stylesheet" href="styles.min.css?v=20260912-9">
   <meta name="robots" content="index,follow">
   <meta property="og:title" content="LeadDesk AI — interaktywne demo">
   <meta property="og:description" content="Zobacz drogę zapytania od formularza przez walidację i AI do panelu obsługi.">
@@ -134,9 +134,9 @@
     <div class="drawer-body">
       <div class="lead-summary"><span class="lead-avatar">LD</span><div><strong data-drawer-company>—</strong><small data-drawer-contact>—</small></div><span class="status-pill" data-drawer-status>—</span></div>
       <section><p class="overline">POTRZEBA</p><h3 data-drawer-topic>—</h3><p data-drawer-message>—</p></section>
-      <dl><div><dt>Źródło</dt><dd data-drawer-source>—</dd></div><div><dt>Budżet</dt><dd data-drawer-budget>—</dd></div><div><dt>Dodano</dt><dd data-drawer-created>—</dd></div><div><dt>Priorytet AI</dt><dd data-drawer-score>—</dd></div></dl>
-      <section class="ai-summary"><p class="overline">PODSUMOWANIE AI</p><p data-drawer-summary>—</p></section>
-      <section class="draft-box" hidden><div><p class="overline">SZKIC ODPOWIEDZI · NIE WYSŁANO <span class="ai-live-badge" data-ai-draft-source></span></p><button class="copy-draft" type="button">Kopiuj</button></div><strong data-draft-subject></strong><p data-draft-body></p></section>
+      <dl><div><dt>Źródło</dt><dd data-drawer-source>—</dd></div><div><dt>Budżet</dt><dd data-drawer-budget>—</dd></div><div><dt>Dodano</dt><dd data-drawer-created>—</dd></div><div><dt>Priorytet</dt><dd data-drawer-score>—</dd></div></dl>
+      <section class="ai-summary"><p class="overline">WSTĘPNA ANALIZA</p><p data-drawer-summary>—</p></section>
+      <section class="draft-box" hidden><div><p class="overline">SZKIC AI · NIE WYSŁANO <span class="ai-live-badge" data-ai-draft-source></span></p><button class="copy-draft" type="button">Kopiuj</button></div><strong data-draft-subject></strong><p data-draft-body></p></section>
       <label class="status-select">Zmień etap<select data-status-select><option value="new">Nowy</option><option value="qualified">Do kontaktu</option><option value="offer">Oferta wysłana</option><option value="won">Zlecenie przyjęte</option><option value="lost">Odrzucone</option></select></label>
     </div>
     <footer><button class="secondary-button create-offer" type="button">Podgląd oferty</button><button class="primary-button generate-draft" type="button"><span>AI</span> Przygotuj szkic</button></footer>
@@ -160,6 +160,6 @@
   </section>
 
   <div class="toast" role="status" aria-live="polite"></div>
-  <script src="app.min.js?v=20260912-8"></script>
+  <script src="app.min.js?v=20260912-9"></script>
 </body>
 </html>
