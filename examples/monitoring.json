@@ -1,0 +1,26 @@
+{
+  "checks": [
+    {
+      "name": "Publiczna strona HTTP",
+      "type": "http",
+      "url": "https://example.com/",
+      "expected_status": 200,
+      "timeout": 5
+    },
+    {
+      "name": "Certyfikat TLS",
+      "type": "tls",
+      "host": "example.com",
+      "port": 443,
+      "minimum_days": 14,
+      "timeout": 5
+    },
+    {
+      "name": "Wolne miejsce",
+      "type": "disk",
+      "path": ".",
+      "minimum_free_percent": 5
+    }
+  ]
+}
+

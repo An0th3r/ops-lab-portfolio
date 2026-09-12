@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio IT — serwery, wdrożenia i automatyzacje</title>
+  <meta name="description" content="Portfolio usług administracji serwerami, wdrożeń aplikacji, bezpieczeństwa, kopii zapasowych i automatyzacji IT.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#070b12">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070b12'/%3E%3Cpath d='M18 20h28v9H18zm0 15h28v9H18z' fill='none' stroke='%235de4c7' stroke-width='4'/%3E%3Ccircle cx='24' cy='24.5' r='2' fill='%235de4c7'/%3E%3Ccircle cx='24' cy='39.5' r='2' fill='%235de4c7'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#realizacje">Przejdź do realizacji</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Strona główna portfolio">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i></span>
+      <span>OPS<span>/</span>LAB</span>
+    </a>
+    <nav aria-label="Główna nawigacja">
+      <a href="#kod">Kod i testy</a>
+      <a href="#realizacje">Realizacje</a>
+      <a href="#kompetencje">Kompetencje</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="header-cta" href="#kod">Sprawdź kod</a>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> ADMINISTRACJA SERWERAMI · WDROŻENIA · AUTOMATYZACJE</p>
+        <h1 id="hero-title">Porządek w infrastrukturze.<br><em>Spokojna głowa po wdrożeniu.</em></h1>
+        <p class="hero-lead">Konfiguruję serwery Linux, uruchamiam aplikacje i zabezpieczam procesy, od których zależy codzienna praca. Z jasnym zakresem, kopią zapasową i planem wycofania zmian.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#realizacje">Zobacz realizacje <span aria-hidden="true">↘</span></a>
+          <a class="button button-ghost" href="#kod">Kod i testy na GitHubie</a>
+        </div>
+        <ul class="trust-list" aria-label="Najważniejsze zasady pracy">
+          <li><span>01</span> Najpierw diagnoza</li>
+          <li><span>02</span> Backup przed zmianą</li>
+          <li><span>03</span> Dokumentacja po pracy</li>
+        </ul>
+      </div>
+
+      <div class="ops-panel" aria-label="Przykładowy stan wdrożenia">
+        <div class="panel-head">
+          <div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <span>deploy-check / production</span>
+          <span class="live"><i></i> ONLINE</span>
+        </div>
+        <div class="panel-body">
+          <div class="deploy-summary">
+            <div>
+              <span class="micro-label">OSTATNIE WDROŻENIE</span>
+              <strong>Bez przestoju</strong>
+            </div>
+            <span class="deploy-badge">✓ zakończone</span>
+          </div>
+          <div class="metric-grid">
+            <div><span>HTTPS</span><strong class="ok">aktywny</strong></div>
+            <div><span>Backup</span><strong>02:00</strong></div>
+            <div><span>Usługi</span><strong>6 / 6</strong></div>
+            <div><span>Alerty</span><strong class="ok">0</strong></div>
+          </div>
+          <div class="terminal" aria-label="Przykładowy dziennik kontroli wdrożenia">
+            <p><span class="prompt">$</span> deploy-check --environment prod</p>
+            <p><span class="muted">→</span> reverse proxy <span class="ok">ready</span></p>
+            <p><span class="muted">→</span> tls certificate <span class="ok">valid</span></p>
+            <p><span class="muted">→</span> database backup <span class="ok">verified</span></p>
+            <p><span class="muted">→</span> health endpoint <span class="ok">200 OK</span></p>
+            <p class="terminal-result">All checks passed in 1.8s<span class="cursor">_</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof-strip" aria-label="Obszary techniczne">
+      <span>LINUX</span><i></i><span>DOCKER</span><i></i><span>NGINX</span><i></i><span>SSL</span><i></i><span>BACKUP</span><i></i><span>MONITORING</span>
+    </section>
+
+    <section class="section code-section" id="kod" aria-labelledby="code-title">
+      <div class="section-heading">
+        <div><p class="eyebrow"><span></span> PUBLICZNY KOD · TESTY AUTOMATYCZNE</p><h2 id="code-title">Nie tylko opis.<br>Kod można sprawdzić.</h2></div>
+        <p>Trzy działające narzędzia demonstracyjne bez zewnętrznych bibliotek. Repozytorium zawiera kod źródłowy, przykłady, dokumentację oraz testy uruchamiane po każdej zmianie.</p>
+      </div>
+      <div class="code-grid">
+        <article>
+          <div class="code-card-head"><span>01</span><strong>BACKUP</strong></div>
+          <h3>Backup Guard</h3>
+          <p>Archiwum ZIP z manifestem SHA-256, kontrolą spójności, rotacją oraz bezpiecznym odtworzeniem blokującym wyjście poza katalog docelowy.</p>
+          <ul class="tag-list"><li>Python</li><li>SHA-256</li><li>safe restore</li></ul>
+          <a class="repo-button" href="#kod" data-repo-path="tree/main/backup_guard">Zobacz kod <span>↗</span></a>
+        </article>
+        <article>
+          <div class="code-card-head"><span>02</span><strong>MONITORING</strong></div>
+          <h3>Service Watch</h3>
+          <p>Kontrole HTTP, TCP, TLS i dysku ze wspólnym raportem JSON lub Markdown oraz kodem wyjścia gotowym do crona i automatyzacji.</p>
+          <ul class="tag-list"><li>HTTP</li><li>TLS</li><li>JSON report</li></ul>
+          <a class="repo-button" href="#kod" data-repo-path="tree/main/service_watch">Zobacz kod <span>↗</span></a>
+        </article>
+        <article>
+          <div class="code-card-head"><span>03</span><strong>WDROŻENIA</strong></div>
+          <h3>Release Guard</h3>
+          <p>Wersjonowane wydania, healthcheck przed przełączeniem, atomowy zapis aktywnej wersji i rollback do ostatniego działającego wydania.</p>
+          <ul class="tag-list"><li>deploy</li><li>healthcheck</li><li>rollback</li></ul>
+          <a class="repo-button" href="#kod" data-repo-path="tree/main/release_guard">Zobacz kod <span>↗</span></a>
+        </article>
+      </div>
+      <div class="test-proof">
+        <div><span class="test-status">8 / 8 PASS</span><strong>Testy obejmują również sytuacje awaryjne</strong><p>Uszkodzona ścieżka backupu, błędny status usługi, nieudany healthcheck i rollback.</p></div>
+        <a class="button button-ghost" href="#kod" data-repo-path="tree/main/tests">Otwórz testy <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="section projects-preview" id="realizacje" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <div><p class="eyebrow"><span></span> WYBRANE REALIZACJE</p><h2 id="projects-title">Technika pokazana<br>na konkretnym przykładzie.</h2></div>
+        <p>Każda pozycja to projekt demonstracyjny wykonany w środowisku testowym. Pierwsze trzy mają publiczny kod i testy; pozostałe pokazują proces oraz zakres możliwego wdrożenia.</p>
+      </div>
+      <article class="featured-project">
+        <div class="project-number">01</div>
+        <div class="project-copy">
+          <div class="project-meta"><span>WDROŻENIE APLIKACJI</span><span>LAB / DEMO</span></div>
+          <h3>Bezpieczny start aplikacji na VPS</h3>
+          <p>Kompletny układ: kontenery Docker, reverse proxy Nginx, certyfikat SSL, kontrola stanu usług i procedura szybkiego powrotu do poprzedniej wersji.</p>
+          <ul class="tag-list"><li>Ubuntu</li><li>Docker Compose</li><li>Nginx</li><li>Let's Encrypt</li></ul>
+        </div>
+        <div class="architecture" aria-label="Schemat wdrożenia">
+          <div class="arch-node"><span>01</span><strong>Internet</strong><small>HTTPS :443</small></div>
+          <div class="arch-arrow" aria-hidden="true">→</div>
+          <div class="arch-node active"><span>02</span><strong>Nginx</strong><small>reverse proxy</small></div>
+          <div class="arch-arrow" aria-hidden="true">→</div>
+          <div class="arch-stack"><div class="arch-node"><span>03</span><strong>Aplikacja</strong><small>Docker</small></div><div class="arch-node"><span>04</span><strong>Baza</strong><small>sieć prywatna</small></div></div>
+        </div>
+      </article>
+
+      <div class="project-toolbar" aria-label="Filtrowanie realizacji">
+        <p><strong>Więcej projektów</strong><span>7 studiów przypadku</span></p>
+        <div class="filters" role="group" aria-label="Kategorie projektów">
+          <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">Wszystkie</button>
+          <button class="filter" type="button" data-filter="server" aria-pressed="false">Serwery</button>
+          <button class="filter" type="button" data-filter="security" aria-pressed="false">Bezpieczeństwo</button>
+          <button class="filter" type="button" data-filter="automation" aria-pressed="false">Automatyzacje</button>
+          <button class="filter" type="button" data-filter="web" aria-pressed="false">WWW</button>
+        </div>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card" data-category="server automation">
+          <div class="card-top"><span class="card-index">02 / 08</span><span class="lab-label">LAB / DEMO</span></div>
+          <div class="card-icon" aria-hidden="true">BK</div>
+          <h3>Backup z kontrolą odtworzenia</h3>
+          <p>Automatyczna kopia bazy i plików, rotacja archiwów, suma kontrolna oraz raport po testowym odtworzeniu.</p>
+          <ul class="tag-list"><li>Bash</li><li>Cron</li><li>PostgreSQL</li></ul>
+          <button class="case-button" type="button" data-case="backup">Zobacz zakres <span>↗</span></button>
+        </article>
+
+        <article class="project-card" data-category="server automation">
+          <div class="card-top"><span class="card-index">03 / 08</span><span class="lab-label">LAB / DEMO</span></div>
+          <div class="card-icon" aria-hidden="true">UP</div>
+          <h3>Monitoring i alerty usług</h3>
+          <p>Kontrola dostępności HTTP, miejsca na dysku, ważności certyfikatu i stanu kontenerów z czytelnym raportem.</p>
+          <ul class="tag-list"><li>Healthcheck</li><li>Docker</li><li>Alerty</li></ul>
+          <button class="case-button" type="button" data-case="monitoring">Zobacz zakres <span>↗</span></button>
+        </article>
+
+        <article class="project-card" data-category="server security">
+          <div class="card-top"><span class="card-index">04 / 08</span><span class="lab-label">LAB / DEMO</span></div>
+          <div class="card-icon" aria-hidden="true">SH</div>
+          <h3>Audyt i utwardzenie VPS</h3>
+          <p>Przegląd kont, portów, aktualizacji i logów. Bezpieczny plan zmian bez odcinania właściciela od serwera.</p>
+          <ul class="tag-list"><li>SSH</li><li>Firewall</li><li>Fail2ban</li></ul>
+          <button class="case-button" type="button" data-case="hardening">Zobacz zakres <span>↗</span></button>
+        </article>
+
+        <article class="project-card" data-category="web security">
+          <div class="card-top"><span class="card-index">05 / 08</span><span class="lab-label">LAB / DEMO</span></div>
+          <div class="card-icon" aria-hidden="true">CF</div>
+          <h3>Cloudflare bez efektów ubocznych</h3>
+          <p>DNS, SSL, cache i podstawowe reguły ochronne wdrażane etapami, z testem koszyka, logowania i panelu.</p>
+          <ul class="tag-list"><li>Cloudflare</li><li>DNS</li><li>Cache</li></ul>
+          <button class="case-button" type="button" data-case="cloudflare">Zobacz zakres <span>↗</span></button>
+        </article>
+
+        <article class="project-card" data-category="web server">
+          <div class="card-top"><span class="card-index">06 / 08</span><span class="lab-label">LAB / DEMO</span></div>
+          <div class="card-icon" aria-hidden="true">WP</div>
+          <h3>Migracja WordPress z planem powrotu</h3>
+          <p>Przeniesienie strony, bazy, domeny i poczty bez zgadywania. Kontrola linków, formularzy i certyfikatu po zmianie.</p>
+          <ul class="tag-list"><li>WordPress</li><li>MySQL</li><li>DNS</li></ul>
+          <button class="case-button" type="button" data-case="wordpress">Zobacz zakres <span>↗</span></button>
+        </article>
+
+        <article class="project-card" data-category="server automation">
+          <div class="card-top"><span class="card-index">07 / 08</span><span class="lab-label">LAB / DEMO</span></div>
+          <div class="card-icon" aria-hidden="true">DB</div>
+          <h3>Odtworzenie i migracja SQL</h3>
+          <p>Diagnoza usługi, zabezpieczenie danych, kontrolowana reinstalacja lub migracja oraz sprawdzenie spójności.</p>
+          <ul class="tag-list"><li>PostgreSQL</li><li>MySQL</li><li>Backup</li></ul>
+          <button class="case-button" type="button" data-case="sql">Zobacz zakres <span>↗</span></button>
+        </article>
+
+        <article class="project-card" data-category="automation server">
+          <div class="card-top"><span class="card-index">08 / 08</span><span class="lab-label">LAB / DEMO</span></div>
+          <div class="card-icon" aria-hidden="true">CD</div>
+          <h3>Powtarzalne wdrożenie bez chaosu</h3>
+          <p>Skryptowana publikacja wersji, sprawdzenie działania, czytelny dziennik zmian i szybkie wycofanie błędnego wydania.</p>
+          <ul class="tag-list"><li>Git</li><li>CI/CD</li><li>Rollback</li></ul>
+          <button class="case-button" type="button" data-case="deployment">Zobacz zakres <span>↗</span></button>
+        </article>
+      </div>
+      <p class="portfolio-note"><strong>Ważne:</strong> projekty 01–08 są samodzielnymi realizacjami laboratoryjnymi. Nie przypisuję im fikcyjnych klientów, przychodów ani wyników produkcyjnych.</p>
+    </section>
+
+    <section class="competence-section" id="kompetencje" aria-labelledby="skills-title">
+      <div class="section competence-inner">
+        <div class="section-heading">
+          <div><p class="eyebrow"><span></span> KOMPETENCJE</p><h2 id="skills-title">Od diagnozy<br>do dokumentacji.</h2></div>
+          <p>Biorę odpowiedzialność za jasno ustalony fragment pracy. Jeśli przed startem brakuje danych, zaczynam od krótkiego audytu zamiast obiecywać wynik w ciemno.</p>
+        </div>
+        <div class="skill-matrix">
+          <article><span class="skill-no">A / 01</span><h3>Linux i VPS</h3><p>Ubuntu/Debian, użytkownicy, uprawnienia, SSH, usługi systemowe, logi, przestrzeń dyskowa i bezpieczne aktualizacje.</p><div><span>SSH</span><span>systemd</span><span>logs</span></div></article>
+          <article><span class="skill-no">A / 02</span><h3>Wdrożenia WWW</h3><p>Domena, DNS, reverse proxy, HTTPS, kontenery i uporządkowana konfiguracja aplikacji na serwerze.</p><div><span>Nginx</span><span>Docker</span><span>SSL</span></div></article>
+          <article><span class="skill-no">A / 03</span><h3>Dane i kopie</h3><p>Eksport, rotacja, kontrola archiwów, test odtworzenia i procedura awaryjna opisana po polsku.</p><div><span>SQL</span><span>backup</span><span>restore</span></div></article>
+          <article><span class="skill-no">B / 01</span><h3>Bezpieczeństwo</h3><p>Audyt ekspozycji, twarde minimum konfiguracji, ograniczenie dostępu i wdrażanie zmian małymi krokami.</p><div><span>firewall</span><span>SSH keys</span><span>audit</span></div></article>
+          <article><span class="skill-no">B / 02</span><h3>Monitoring</h3><p>Kontrola działania usług, certyfikatów i zasobów. Alert ma wskazywać problem, a nie tylko robić hałas.</p><div><span>uptime</span><span>alerts</span><span>health</span></div></article>
+          <article><span class="skill-no">B / 03</span><h3>Automatyzacja</h3><p>Powtarzalne skrypty do wdrożeń, raportów, porządkowania danych i rutynowych kontroli administracyjnych.</p><div><span>Bash</span><span>PowerShell</span><span>Python</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-section" id="proces" aria-labelledby="process-title">
+      <div class="section-heading">
+        <div><p class="eyebrow"><span></span> SPOSÓB PRACY</p><h2 id="process-title">Zmiany bez<br>niepotrzebnego ryzyka.</h2></div>
+        <p>Najpierw ustalamy efekt i granice zlecenia. Dostęp produkcyjny jest tymczasowy, a dane logowania nie trafiają do publicznych wiadomości.</p>
+      </div>
+      <ol class="process-list">
+        <li><span>01</span><div><h3>Rozpoznanie</h3><p>Cel, obecny stan, ograniczenia i potrzebne dostępy. Na końcu wiadomo, co dokładnie będzie zrobione.</p></div><small>krótki brief</small></li>
+        <li><span>02</span><div><h3>Zabezpieczenie</h3><p>Kopia ważnych danych i plan wycofania zmian. Przy ryzykownych pracach ustalamy okno serwisowe.</p></div><small>backup + rollback</small></li>
+        <li><span>03</span><div><h3>Realizacja i test</h3><p>Zmiany etapami, kontrola logów i test najważniejszych ścieżek po wdrożeniu.</p></div><small>checklista</small></li>
+        <li><span>04</span><div><h3>Przekazanie</h3><p>Podsumowanie wykonanych prac, wynik testów oraz prosta instrukcja obsługi lub odtworzenia.</p></div><small>dokumentacja</small></li>
+      </ol>
+    </section>
+
+    <section class="section scope-section" aria-labelledby="scope-title">
+      <div class="scope-box">
+        <div class="scope-copy"><p class="eyebrow"><span></span> DOBRY PIERWSZY KROK</p><h2 id="scope-title">Małe zlecenie,<br>konkretny rezultat.</h2><p>Najlepiej zaczynać od jednego zamkniętego zadania: uruchomienia aplikacji, naprawy SSL, konfiguracji backupu, diagnozy błędu albo audytu VPS.</p></div>
+        <div class="scope-checklist">
+          <p>Przed wyceną potrzebuję:</p>
+          <ul><li><i>✓</i><span><strong>Co nie działa lub co ma powstać</strong><small>Jeden konkretny cel biznesowy.</small></span></li><li><i>✓</i><span><strong>Jaki jest obecny serwer i technologia</strong><small>Hosting/VPS, system, aplikacja, baza.</small></span></li><li><i>✓</i><span><strong>Kiedy można wykonać zmiany</strong><small>Termin i ewentualne okno serwisowe.</small></span></li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" aria-labelledby="faq-title">
+      <div class="section-heading compact-heading"><div><p class="eyebrow"><span></span> FAQ</p><h2 id="faq-title">Zanim zaczniemy.</h2></div></div>
+      <div class="faq-list">
+        <details><summary>Czy realizacje w portfolio są prawdziwe?<span>+</span></summary><p>To samodzielnie przygotowane projekty demonstracyjne w środowisku testowym. Pokazują sposób pracy i rozwiązania techniczne, ale nie udają wdrożeń dla klientów.</p></details>
+        <details><summary>Czy pracujesz bezpośrednio na serwerze produkcyjnym?<span>+</span></summary><p>Tak, gdy wymaga tego zadanie, ale dopiero po ustaleniu zakresu, zabezpieczeniu danych i sposobu powrotu. Proste elementy najpierw odtwarzam w środowisku testowym.</p></details>
+        <details><summary>Jak przekazać dostęp?<span>+</span></summary><p>Najlepiej przez tymczasowe konto z minimalnymi uprawnieniami lub bezpieczny kanał platformy. Haseł i kluczy nie należy umieszczać w publicznym opisie zlecenia.</p></details>
+        <details><summary>Co dostaję po zakończeniu?<span>+</span></summary><p>Ustalony rezultat, informację o wykonanych zmianach, wynik kontroli oraz krótką instrukcję. Zakres poprawek i wsparcia po wdrożeniu ustalamy przed startem.</p></details>
+      </div>
+    </section>
+
+    <section class="contact-section" id="kontakt" aria-labelledby="contact-title">
+      <div class="contact-inner">
+        <p class="eyebrow"><span></span> KONTAKT</p>
+        <h2 id="contact-title">Masz serwer do ogarnięcia?</h2>
+        <p>Wyślij link do zlecenia albo krótki opis problemu przez platformę, na której widzisz to portfolio. Wrócę z pytaniami, zakresem i realną wyceną.</p>
+        <button class="button button-primary copy-brief" type="button" data-copy="Dzień dobry, potrzebuję pomocy z: [krótki opis]. Obecne środowisko: [hosting/VPS/system]. Oczekiwany rezultat: [co ma działać]. Termin: [data]. Czy możesz ocenić zakres i przygotować wycenę?">Skopiuj wzór wiadomości <span>⧉</span></button>
+        <span class="copy-status" role="status" aria-live="polite"></span>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="case-dialog" aria-labelledby="case-title">
+    <button class="dialog-close" type="button" aria-label="Zamknij szczegóły">×</button>
+    <p class="eyebrow"><span></span> STUDIUM PRZYPADKU · LAB / DEMO</p>
+    <h2 id="case-title"></h2>
+    <p class="dialog-intro" id="case-intro"></p>
+    <div class="dialog-grid"><div><span>PROBLEM</span><p id="case-problem"></p></div><div><span>ROZWIĄZANIE</span><p id="case-solution"></p></div><div><span>KONTROLA</span><p id="case-check"></p></div><div><span>PRZEKAZANIE</span><p id="case-handoff"></p></div></div>
+  </dialog>
+
+  <footer><div><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span>OPS<span>/</span>LAB</span></a><p>Portfolio usług IT · serwery, wdrożenia i automatyzacje</p></div><p>Projekty demonstracyjne · środowiska testowe · 2026</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
