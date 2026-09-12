@@ -147,6 +147,10 @@ footer { max-width: var(--max); margin: 0 auto; padding: 2rem; border-top: 1px s
 .project-card h3 { margin-bottom: .7rem; font-size: 1.35rem; }
 .project-card > p { color: var(--muted); font-size: .94rem; }
 .project-card .tag-list { margin-top: auto; padding-top: 1.2rem; }
+.project-cta { min-height: 355px; padding: clamp(2rem, 5vw, 4rem); display: flex; flex-direction: column; align-items: flex-start; justify-content: center; background: radial-gradient(circle at 100% 0%, rgba(93,228,199,.18), transparent 48%), #101b28; }
+.project-cta h3 { margin: 1.2rem 0 .8rem; font-size: clamp(1.8rem, 3vw, 3rem); line-height: 1; letter-spacing: -.04em; }
+.project-cta p { max-width: 560px; color: #b6c3d2; }
+.project-cta .button { margin-top: 1.25rem; }
 .case-button { margin-top: 1.1rem; padding: .85rem 0 0; display: flex; align-items: center; justify-content: space-between; border: 0; border-top: 1px solid var(--line-soft); background: transparent; color: var(--text); font: 700 .85rem inherit; text-align: left; cursor: pointer; }
 .case-button span { color: var(--accent); }
 .case-button:hover, .case-button:focus-visible { color: var(--accent); }
@@ -261,7 +265,7 @@ footer .brand-mark { width: 28px; height: 28px; padding: 6px; }
   .test-proof, .test-proof > div { align-items: flex-start; grid-template-columns: 1fr; flex-direction: column; }
   .test-proof p { grid-column: 1; }
   .test-status { grid-row: auto; }
-  .project-card { min-height: 330px; }
+  .project-card, .project-cta { min-height: 330px; }
   .motion-section { padding-top: 2rem; }
   .motion-copy { padding: 2rem 1.25rem; }
   .motion-stage { min-height: 360px; padding: .5rem; }
