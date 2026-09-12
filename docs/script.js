@@ -127,3 +127,9 @@ document.querySelectorAll('details').forEach((item) => {
     marker.textContent = item.open ? '−' : '+';
   });
 });
+
+document.querySelectorAll('[data-open-ai-assistant]').forEach((button) => {
+  button.addEventListener('click', () => {
+    window.dispatchEvent(new CustomEvent('ops-lab-chat:open'));
+  });
+});

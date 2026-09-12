@@ -23,6 +23,15 @@ release_guard
                                                    |
                                                    v
                                                 rollback
+
+ai_assistant
+  widget na stronie -> API Cloudflare Worker -> ograniczenie zapytań
+                                                |
+                                                v
+                                 prywatna baza wiedzy + model AI
+                                                |
+                                                v
+                                    odpowiedź bez ujawniania klucza
 ```
 
 ## Założenia bezpieczeństwa
@@ -33,4 +42,10 @@ release_guard
 - Nieznany rodzaj kontroli jest błędem, a nie pominiętym wpisem.
 - Nowa wersja nie staje się aktywna przed healthcheckiem.
 - Stan aktywnego wydania jest zapisywany atomowo.
+- Przeglądarka nie otrzymuje klucza ani prywatnej bazy wiedzy asystenta.
+- Endpoint czatu akceptuje wyłącznie wskazane domeny, krótki kontekst i ograniczoną liczbę zapytań.
+- Rozmowy nie są zapisywane w bazie przez demonstracyjną wersję Workera.
 
+Kod backendu asystenta, prompt i baza wiedzy pozostają prywatne. Publiczne są
+wyłącznie opis architektury oraz zminimalizowany plik widgetu wymagany przez
+przeglądarkę.

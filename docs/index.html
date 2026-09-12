@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OPS/LAB — automatyzacje IT, backup i monitoring</title>
-  <meta name="description" content="Sprawdzalne automatyzacje IT: backup z kontrolą SHA-256, monitoring usług i bezpieczne wdrożenia z rollbackiem. Publiczny kod i 8/8 testów.">
+  <title>OPS/LAB — automatyzacje IT, backup, monitoring i AI</title>
+  <meta name="description" content="Sprawdzalne automatyzacje IT: backup, monitoring, bezpieczne wdrożenia i asystent AI dla strony firmy. Publiczny kod i testy.">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#070b12">
   <link rel="canonical" href="https://an0th3r.github.io/ops-lab-portfolio/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pl_PL">
-  <meta property="og:title" content="OPS/LAB — automatyzacje IT, backup i monitoring">
-  <meta property="og:description" content="Publiczny kod, dokumentacja i 8/8 testów. Małe narzędzia IT, które można sprawdzić przed zleceniem.">
+  <meta property="og:title" content="OPS/LAB — automatyzacje IT, backup, monitoring i AI">
+  <meta property="og:description" content="Publiczny kod, dokumentacja i testy. Automatyzacje IT oraz asystent AI, które można sprawdzić przed zleceniem.">
   <meta property="og:url" content="https://an0th3r.github.io/ops-lab-portfolio/">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070b12'/%3E%3Cpath d='M18 20h28v9H18zm0 15h28v9H18z' fill='none' stroke='%235de4c7' stroke-width='4'/%3E%3Ccircle cx='24' cy='24.5' r='2' fill='%235de4c7'/%3E%3Ccircle cx='24' cy='39.5' r='2' fill='%235de4c7'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css?v=20260912-2">
@@ -25,6 +25,7 @@
     </a>
     <nav aria-label="Główna nawigacja">
       <a href="#kod">Narzędzia</a>
+      <a href="#asystent-ai">Asystent AI</a>
       <a href="#animacja">Animacja</a>
       <a href="#realizacje">Projekty</a>
       <a href="#kompetencje">Kompetencje</a>
@@ -117,6 +118,35 @@
       <div class="test-proof">
         <div><span class="test-status">8 / 8 PASS</span><strong>Testy obejmują również sytuacje awaryjne</strong><p>Sprawdzamy uszkodzone archiwum, niedostępną usługę oraz nieudane wdrożenie.</p></div>
         <a class="button button-ghost" href="https://github.com/An0th3r/ops-lab-portfolio/tree/main/tests" data-repo-path="tree/main/tests">Otwórz testy <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="section ai-product-section" id="asystent-ai" aria-labelledby="ai-title">
+      <div class="ai-product">
+        <div class="ai-product-copy">
+          <p class="eyebrow"><span></span> PRODUKT DO WDROŻENIA</p>
+          <h2 id="ai-title">Asystent AI<br>na stronę firmy.</h2>
+          <p>Widget odpowiada na pytania klientów na podstawie treści zaakceptowanych przez właściciela strony. Model działa za prywatnym API, więc klucz i baza wiedzy nie trafiają do przeglądarki.</p>
+          <ul class="ai-checks">
+            <li><span>01</span> Wiedza dopasowana do firmy</li>
+            <li><span>02</span> Ograniczenie liczby zapytań</li>
+            <li><span>03</span> Bez zapisywania rozmów w bazie</li>
+          </ul>
+          <div class="ai-product-actions">
+            <button class="button button-primary" type="button" data-open-ai-assistant>Uruchom demo <span aria-hidden="true">↗</span></button>
+            <a class="button button-ghost" href="#kontakt">Zapytaj o wdrożenie</a>
+          </div>
+          <p class="ai-code-note"><span aria-hidden="true">◆</span> Backend, prompt i baza wiedzy pozostają prywatne. Klient kupuje wdrożenie lub uzgodnioną licencję, nie publiczny kod źródłowy.</p>
+        </div>
+        <div class="ai-product-visual" aria-label="Schemat działania asystenta AI">
+          <div class="ai-terminal-head"><span>ops-lab / ai-assistant</span><strong><i></i> READY</strong></div>
+          <div class="ai-conversation">
+            <div class="ai-message ai-message-user"><small>KLIENT</small><p>Czy możecie wdrożyć monitoring i backup na moim VPS?</p></div>
+            <div class="ai-route" aria-hidden="true"><span>WIDGET</span><i>→</i><span>PRYWATNE API</span><i>→</i><span>MODEL + WIEDZA</span></div>
+            <div class="ai-message ai-message-bot"><small>ASYSTENT</small><p>Tak. Do wstępnej oceny potrzebny jest system serwera, lista usług i oczekiwany zakres kopii. Przed zmianami powstaje plan odtworzenia.</p></div>
+          </div>
+          <dl class="ai-metrics"><div><dt>API</dt><dd>Cloudflare Worker</dd></div><div><dt>OCHRONA</dt><dd>4 zapytania / min</dd></div><div><dt>DANE</dt><dd>bez trwałego zapisu</dd></div></dl>
+        </div>
       </div>
     </section>
 
@@ -312,6 +342,7 @@
   </dialog>
 
   <footer><div><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span>OPS<span>/</span>LAB</span></a><p>Automatyzacje IT · backup · monitoring · wdrożenia</p></div><p>Kod · testy · dokumentacja · 2026</p></footer>
-  <script src="script.js"></script>
+  <script src="script.js?v=20260912-3"></script>
+  <script src="ai-assistant-widget.min.js?v=20260912-1" data-brand="OPS/LAB" data-accent="#5de4c7" defer></script>
 </body>
 </html>

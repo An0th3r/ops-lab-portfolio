@@ -32,6 +32,13 @@ wykonana bez zewnętrznych bibliotek. Publiczny podgląd ma znak wodny
 **[Otwórz animację](https://an0th3r.github.io/ops-lab-portfolio/animation/)** ·
 **[Zobacz kod SVG](docs/animation/folding-box-demo.svg)**
 
+## Asystent AI dla strony firmy
+
+Portfolio zawiera osadzalny widget czatu z oddzielnym backendem Cloudflare
+Worker, kontrolowaną bazą wiedzy, ograniczeniem nadużyć i bezpiecznym wywołaniem
+modelu bez klucza w przeglądarce. Publiczne repozytorium pokazuje interfejs oraz
+architekturę rozwiązania. Kod backendu, prompt i baza wiedzy pozostają prywatne.
+
 ## Szybki test
 
 Wymagany jest Python 3.11 lub nowszy. Nie trzeba instalować żadnych bibliotek.
@@ -87,9 +94,11 @@ tests/              testy jednostkowe oraz integracyjne
 examples/           bezpieczne dane i konfiguracje demonstracyjne
 docs/               strona portfolio, wynik testów i opis architektury
 docs/animation/     animacja SVG i samodzielna strona podglądu
+docs/ai-assistant-widget.min.js  zminimalizowany widget demonstracyjny
 ```
 
 ## Licencja
 
-MIT — kod można przeglądać, uruchamiać i rozwijać. Dane dostępowe i informacje
-o prawdziwych serwerach nie są częścią repozytorium.
+MIT obejmuje trzy narzędzia Python, ich testy, przykłady i animację SVG. Projekt
+strony oraz widget AI są wyłączone z MIT i objęte zasadą „all rights reserved”.
+Dokładny zakres znajduje się w pliku [LICENSE](LICENSE).
