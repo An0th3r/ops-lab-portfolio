@@ -13,7 +13,7 @@ test_rollback_requires_previous_release ... ok
 test_http_tcp_and_disk_checks_pass ... ok
 test_wrong_status_and_unknown_type_are_reported ... ok
 
-Ran 8 tests in 0.615s
+Ran 8 tests
 OK
 ```
 

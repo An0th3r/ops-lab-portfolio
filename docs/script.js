@@ -3,14 +3,15 @@ const cards = document.querySelectorAll('.project-card');
 
 const githubPagesHost = window.location.hostname.match(/^([a-z0-9-]+)\.github\.io$/i);
 const repositoryName = window.location.pathname.split('/').filter(Boolean)[0];
-if (githubPagesHost && repositoryName) {
-  const repositoryUrl = `https://github.com/${githubPagesHost[1]}/${repositoryName}`;
-  document.querySelectorAll('[data-repo-path]').forEach((link) => {
-    link.href = `${repositoryUrl}/${link.dataset.repoPath}`;
-    link.target = '_blank';
-    link.rel = 'noreferrer';
-  });
-}
+const repositoryUrl = githubPagesHost && repositoryName
+  ? `https://github.com/${githubPagesHost[1]}/${repositoryName}`
+  : 'https://github.com/An0th3r/ops-lab-portfolio';
+
+document.querySelectorAll('[data-repo-path]').forEach((link) => {
+  link.href = `${repositoryUrl}/${link.dataset.repoPath}`;
+  link.target = '_blank';
+  link.rel = 'noreferrer';
+});
 
 filters.forEach((button) => {
   button.addEventListener('click', () => {

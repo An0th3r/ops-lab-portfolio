@@ -1,12 +1,19 @@
-# OPS/LAB — działające portfolio administracji IT
+# OPS/LAB — automatyzacje IT z publicznym kodem
+
+[![Portfolio](https://img.shields.io/badge/portfolio-online-5de4c7?style=for-the-badge)](https://an0th3r.github.io/ops-lab-portfolio/)
+![Testy](https://img.shields.io/badge/testy-8%2F8_PASS-5de4c7?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3.11%2B-71a7ff?style=for-the-badge)
+[![Licencja MIT](https://img.shields.io/badge/licencja-MIT-9baabc?style=for-the-badge)](LICENSE)
 
 To nie są makiety ani opisy fikcyjnych zleceń. Repozytorium zawiera trzy małe,
 uruchamialne narzędzia demonstracyjne napisane wyłącznie z użyciem biblioteki
 standardowej Pythona. Każde ma testy i bezpieczne ustawienia domyślne.
 
-Strona portfolio znajduje się w katalogu `docs/` i jest gotowa do bezpłatnej
-publikacji przez GitHub Pages. Po wdrożeniu będzie dostępna pod adresem
-`https://LOGIN.github.io/NAZWA-REPOZYTORIUM/`.
+**[Zobacz portfolio online](https://an0th3r.github.io/ops-lab-portfolio/)** ·
+**[Wynik testów](docs/TEST-RESULTS.md)** ·
+**[Opis architektury](docs/ARCHITECTURE.md)**
+
+Strona jest publikowana bezpłatnie z katalogu `docs/` przez GitHub Pages.
 
 ## Co można tu sprawdzić
 
@@ -23,6 +30,8 @@ Wymagany jest Python 3.11 lub nowszy. Nie trzeba instalować żadnych bibliotek.
 ```powershell
 python -m unittest discover -s tests -v
 ```
+
+Oczekiwany rezultat: `Ran 8 tests` oraz `OK`.
 
 ## Przykłady
 
