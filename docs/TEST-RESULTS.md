@@ -25,5 +25,4 @@ Dodatkowy test demonstracyjny potwierdził:
 - poprawny healthcheck pliku `index.html`;
 - wskazanie aktywnego katalogu wydania.
 
-Po publikacji te same testy uruchamia automatycznie GitHub Actions.
-
+Każdy może powtórzyć kontrolę poleceniem `python -m unittest discover -s tests -v`.

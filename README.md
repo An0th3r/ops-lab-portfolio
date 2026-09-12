@@ -2,8 +2,7 @@
 
 To nie są makiety ani opisy fikcyjnych zleceń. Repozytorium zawiera trzy małe,
 uruchamialne narzędzia demonstracyjne napisane wyłącznie z użyciem biblioteki
-standardowej Pythona. Każde ma testy automatyczne i bezpieczne ustawienia
-domyślne.
+standardowej Pythona. Każde ma testy i bezpieczne ustawienia domyślne.
 
 Strona portfolio znajduje się w katalogu `docs/` i jest gotowa do bezpłatnej
 publikacji przez GitHub Pages. Po wdrożeniu będzie dostępna pod adresem
@@ -68,8 +67,7 @@ service_watch/      kontrole usług i generowanie raportów
 release_guard/      wersjonowane wdrożenia i rollback
 tests/              testy jednostkowe oraz integracyjne
 examples/           bezpieczne dane i konfiguracje demonstracyjne
-docs/               przykładowy wynik testów i opis architektury
-.github/workflows/   testy po każdym pushu i publikacja GitHub Pages
+docs/               strona portfolio, wynik testów i opis architektury
 ```
 
 ## Licencja
